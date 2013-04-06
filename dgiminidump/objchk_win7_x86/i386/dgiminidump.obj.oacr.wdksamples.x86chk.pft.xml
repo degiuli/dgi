@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+<OACRDEFECTCOUNT>2</OACRDEFECTCOUNT>
+<OACRERRORCOUNT>0</OACRERRORCOUNT>
+<DEFECT _seq="1"><SFA><LINE>76</LINE><COLUMN>40</COLUMN><FILENAME>dgiminidump.cpp</FILENAME><FILEPATH>c:\winddk\7600.16385.1\src\_de_giuli_\dgiminidump\</FILEPATH></SFA><DEFECTCODE>28132</DEFECTCODE><DESCRIPTION>Taking the size of pointer pDecoyFunc:  This will yield the size of a pointer (4 or 8), not the size of the object pointed to. Dereference the pointer, or if the size of a pointer was intended, use the pointer type or (void *) instead.</DESCRIPTION><FUNCTION>RedirectSetUnhandledExceptionFilter</FUNCTION><FUNCLINE>57</FUNCLINE><PATH/></DEFECT>
+<DEFECT _seq="2"><SFA><LINE>79</LINE><COLUMN>77</COLUMN><FILENAME>dgiminidump.cpp</FILENAME><FILEPATH>c:\winddk\7600.16385.1\src\_de_giuli_\dgiminidump\</FILEPATH></SFA><DEFECTCODE>28132</DEFECTCODE><DESCRIPTION>Taking the size of pointer pDecoyFunc:  This will yield the size of a pointer (4 or 8), not the size of the object pointed to. Dereference the pointer, or if the size of a pointer was intended, use the pointer type or (void *) instead.</DESCRIPTION><FUNCTION>RedirectSetUnhandledExceptionFilter</FUNCTION><FUNCLINE>57</FUNCLINE><PATH/></DEFECT>
+</DEFECTS>

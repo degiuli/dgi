@@ -1,0 +1,4836 @@
+ACPI\FIXEDBUTTON\2&DABA3FF&0
+    Name: ACPI Fixed Feature Button
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\FixedButton
+        *FixedButton
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is ACPI Fixed Feature Button
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\GENUINEINTEL_-_X86_FAMILY_15_MODEL_2\_0
+    Name: Intel(R) Pentium(R) 4 CPU 2.80GHz
+    Setup Class: {50127DC3-0F36-415E-A6CC-4CB3BE910B65} Processor
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        intelppm
+    Hardware IDs:
+        ACPI\GenuineIntel_-_x86_Family_15_Model_2
+        *GenuineIntel_-_x86_Family_15_Model_2
+        ACPI\GenuineIntel_-_x86_Family_15
+        *GenuineIntel_-_x86_Family_15
+        ACPI\GenuineIntel_-_x86
+        *GenuineIntel_-_x86
+    Compatible IDs:
+        ACPI\Processor
+Driver node #0:
+    Inf file is c:\windows\inf\cpu.inf
+    Inf section is Processor_Inst
+    Driver description is Processor
+    Manufacturer name is (Standard processor types)
+    Provider name is Microsoft
+    Driver date is 4/1/2004
+    Driver version is 5.1.2600.0
+    Driver node rank is 8192
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\cpu.inf
+    Inf section is IntelPPM_Inst
+    Driver description is Intel Processor
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 4/1/2004
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 0000A244
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\cpu.inf
+    Inf section is IntelPPM_Inst
+    Driver description is Intel Processor
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 4/1/2004
+    Driver version is 5.1.2600.0
+    Driver node rank is 4
+    Driver node flags are 0000A244
+        Inf is digitally signed
+ACPI\PNP0000\4&26DD0F47&0
+    Name: Programmable interrupt controller
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        IO  : 0020-0021
+        IO  : 00a0-00a1
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0000
+        *PNP0000
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_PIC
+    Driver description is Programmable interrupt controller
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0100\4&26DD0F47&0
+    Name: System timer
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        IO  : 0040-0043
+        IRQ : 0
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0100
+        *PNP0100
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_X
+    Driver description is System timer
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0200\4&26DD0F47&0
+    Name: Direct memory access controller
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        DMA : 4
+        IO  : 0000-000f
+        IO  : 0080-0090
+        IO  : 0094-009f
+        IO  : 00c0-00df
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0200
+        *PNP0200
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_X
+    Driver description is Direct memory access controller
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0303\4&26DD0F47&0
+    Name: Standard 101/102-Key or Microsoft Natural PS/2 Keyboard
+    Setup Class: {4D36E96B-E325-11CE-BFC1-08002BE10318} Keyboard
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0060-0060
+        IO  : 0064-0064
+        IRQ : 1
+    Upper class filters:
+        kbdclass
+    Controlling service:
+        i8042prt
+    Hardware IDs:
+        ACPI\PNP0303
+        *PNP0303
+Driver node #0:
+    Inf file is c:\windows\inf\keyboard.inf
+    Inf section is STANDARD_Inst
+    Driver description is Standard 101/102-Key or Microsoft Natural PS/2 Keyboard
+    Manufacturer name is (Standard keyboards)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+ACPI\PNP0401\4&26DD0F47&0
+    Name: ECP Printer Port (LPT1)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0378-037f
+        IO  : 0778-077b
+        DMA : 3
+    Controlling service:
+        Parport
+    Hardware IDs:
+        ACPI\PNP0401
+        *PNP0401
+Driver node #0:
+    Inf file is c:\windows\inf\msports.inf
+    Inf section is EcpPort
+    Driver description is ECP Printer Port
+    Manufacturer name is (Standard port types)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+ACPI\PNP0501\1
+    Name: Communications Port (COM1)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 03f8-03ff
+        IRQ : 4
+    Upper filters:
+        serenum
+    Controlling service:
+        Serial
+    Hardware IDs:
+        ACPI\PNP0501
+        *PNP0501
+Driver node #0:
+    Inf file is c:\windows\inf\msports.inf
+    Inf section is ComPort
+    Driver description is Communications Port
+    Manufacturer name is (Standard port types)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4097
+    Driver node flags are 0000A240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\msports.inf
+    Inf section is ComPort
+    Driver description is Communications Port
+    Manufacturer name is (Standard port types)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 1
+    Driver node flags are 0000A240
+        Inf is digitally signed
+ACPI\PNP0501\2
+    Name: Communications Port (COM2)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 02f8-02ff
+        IRQ : 3
+    Upper filters:
+        serenum
+    Controlling service:
+        Serial
+    Hardware IDs:
+        ACPI\PNP0501
+        *PNP0501
+Driver node #0:
+    Inf file is c:\windows\inf\msports.inf
+    Inf section is ComPort
+    Driver description is Communications Port
+    Manufacturer name is (Standard port types)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4097
+    Driver node flags are 0000A240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\msports.inf
+    Inf section is ComPort
+    Driver description is Communications Port
+    Manufacturer name is (Standard port types)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 1
+    Driver node flags are 0000A240
+        Inf is digitally signed
+ACPI\PNP0700\4&26DD0F47&0
+    Name: Standard floppy disk controller
+    Setup Class: {4D36E969-E325-11CE-BFC1-08002BE10318} fdc
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 03f0-03f5
+        IO  : 03f7-03f7
+        IRQ : 6
+        DMA : 2
+    Controlling service:
+        fdc
+    Hardware IDs:
+        ACPI\PNP0700
+        *PNP0700
+Driver node #0:
+    Inf file is c:\windows\inf\fdc.inf
+    Inf section is fdc_install
+    Driver description is Standard floppy disk controller
+    Manufacturer name is (Standard floppy disk controllers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+ACPI\PNP0800\4&26DD0F47&0
+    Name: System speaker
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        IO  : 0061-0061
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0800
+        *PNP0800
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_X
+    Driver description is System speaker
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0A03\1
+    Name: PCI bus
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0000-0cf7
+        IO  : 0d00-0fff
+        IO  : 10c0-13ff
+        IO  : 1400-ffff
+        MEM : 000a0000-000bffff
+        MEM : 000c0000-000dffff
+        MEM : bf000000-febfffff
+    Controlling service:
+        pci
+    Hardware IDs:
+        ACPI\PNP0A03
+        *PNP0A03
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is PCI_DRV_ROOT
+    Driver description is PCI bus
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0B00\4&26DD0F47&0
+    Name: System CMOS/real time clock
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0070-0073
+        IRQ : 8
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0B00
+        *PNP0B00
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_X
+    Driver description is System CMOS/real time clock
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0C01\2&DABA3FF&0
+    Name: System board
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        MEM : 000ca200-000cbfff
+        MEM : 000f0000-000f7fff
+        MEM : 000f8000-000fbfff
+        MEM : 000fc000-000fffff
+        MEM : beff0000-beffffff
+        MEM : 00000000-0009ffff
+        MEM : 00100000-befeffff
+        MEM : fec00000-fec00fff
+        MEM : fee00000-fee00fff
+        MEM : fed20000-fed8ffff
+        MEM : ffb00000-ffbfffff
+        MEM : fff00000-ffffffff
+        MEM : 000e0000-000effff
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0C01
+        *PNP0C01
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_MBRES
+    Driver description is System board
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0C02\1
+    Name: Motherboard resources
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        IO  : 0010-001f
+        IO  : 0022-003f
+        IO  : 0044-005f
+        IO  : 0062-0063
+        IO  : 0065-006f
+        IO  : 0074-007f
+        IO  : 0091-0093
+        IO  : 00a2-00bf
+        IO  : 00e0-00ef
+        IO  : 04d0-04d1
+        IO  : 0290-029f
+        IO  : 0800-0805
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0C02
+        *PNP0C02
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_MBRES
+    Driver description is Motherboard resources
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0C04\4&26DD0F47&0
+    Name: Numeric data processor
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        IO  : 00f0-00ff
+        IRQ : 13
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0C04
+        *PNP0C04
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV_X
+    Driver description is Numeric data processor
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0C0C\2&DABA3FF&0
+    Name: ACPI Power Button
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0C0C
+        *PNP0C0C
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is ACPI Power Button
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0C0E\2&DABA3FF&0
+    Name: ACPI Sleep Button
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ACPI\PNP0C0E
+        *PNP0C0E
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is ACPI Sleep Button
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+ACPI\PNP0F13\4&26DD0F47&0
+    Name: PS/2 Compatible Mouse
+    Setup Class: {4D36E96F-E325-11CE-BFC1-08002BE10318} Mouse
+    Driver is running.
+    Device is currently using the following resources:
+        IRQ : 12
+    Upper class filters:
+        mouclass
+    Controlling service:
+        i8042prt
+    Hardware IDs:
+        ACPI\PNP0F13
+        *PNP0F13
+Driver node #0:
+    Inf file is c:\windows\inf\msmouse.inf
+    Inf section is PS2_Inst
+    Driver description is PS/2 Compatible Mouse
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+ACPI\PNPB02F\4&26DD0F47&0
+    Name: Standard Game Port
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0201-0201
+    Controlling service:
+        gameenum
+    Hardware IDs:
+        ACPI\PNPB02F
+        *PNPB02F
+Driver node #0:
+    Inf file is c:\windows\inf\gameport.inf
+    Inf section is Standard_Port
+    Driver description is Standard Game Port
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 9/23/1998
+    Driver version is 5.0.0.0
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\gameport.inf
+    Inf section is CHProducts_Port
+    Driver description is Game port for CH Products Gamecard 3
+    Manufacturer name is CH Products Game Ports
+    Provider name is Microsoft
+    Driver date is 9/23/1998
+    Driver version is 5.0.0.0
+    Driver node rank is 4097
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\gameport.inf
+    Inf section is ESS_Port
+    Driver description is Game port for ESS
+    Manufacturer name is ESS Technology, Inc.
+    Provider name is Microsoft
+    Driver date is 9/23/1998
+    Driver version is 5.0.0.0
+    Driver node rank is 4097
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #3:
+    Inf file is c:\windows\inf\gameport.inf
+    Inf section is ThrustMasterLow_Port
+    Driver description is Game port for Thrustmaster ACM (first port)
+    Manufacturer name is ThrustMaster
+    Provider name is Microsoft
+    Driver date is 9/23/1998
+    Driver version is 5.0.0.0
+    Driver node rank is 4097
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #4:
+    Inf file is c:\windows\inf\gameport.inf
+    Inf section is ThrustMasterHigh_Port
+    Driver description is Game port for Thrustmaster ACM (second port)
+    Manufacturer name is ThrustMaster
+    Provider name is Microsoft
+    Driver date is 9/23/1998
+    Driver version is 5.0.0.0
+    Driver node rank is 4097
+    Driver node flags are 00002240
+        Inf is digitally signed
+ACPI_HAL\PNP0C08\0
+    Name: Microsoft ACPI-Compliant System
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is currently using the following resources:
+        IRQ : 9
+    Controlling service:
+        ACPI
+    Hardware IDs:
+        ACPI_HAL\PNP0C08
+        *PNP0C08
+Driver node #0:
+    Inf file is c:\windows\inf\acpi.inf
+    Inf section is ACPI_Inst
+    Driver description is Microsoft ACPI-Compliant System
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+DISPLAY\DEFAULT_MONITOR\4&2E7680EF&0&80861100&00&02
+    Name: Default Monitor
+    Setup Class: {4D36E96E-E325-11CE-BFC1-08002BE10318} Monitor
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        Monitor\Default_Monitor
+    Compatible IDs:
+        *PNP09FF
+Driver node #0:
+    Inf file is c:\windows\inf\monitor.inf
+    Inf section is Unknown.Install
+    Driver description is Default Monitor
+    Manufacturer name is (Standard monitor types)
+    Provider name is Microsoft
+    Driver date is 6/6/2001
+    Driver version is 5.1.2001.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\monitor.inf
+    Inf section is VESADDC.Install
+    Driver description is Plug and Play Monitor
+    Manufacturer name is (Standard monitor types)
+    Provider name is Microsoft
+    Driver date is 6/6/2001
+    Driver version is 5.1.2001.0
+    Driver node rank is 8192
+    Driver node flags are 00002240
+        Inf is digitally signed
+DISPLAY\GSM428A\4&2E7680EF&0&80861100&00&02
+    Name: Plug and Play Monitor
+    Setup Class: {4D36E96E-E325-11CE-BFC1-08002BE10318} Monitor
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        Monitor\GSM428A
+    Compatible IDs:
+        *PNP09FF
+Driver node #0:
+    Inf file is c:\windows\inf\monitor.inf
+    Inf section is VESADDC.Install
+    Driver description is Plug and Play Monitor
+    Manufacturer name is (Standard monitor types)
+    Provider name is Microsoft
+    Driver date is 6/6/2001
+    Driver version is 5.1.2001.0
+    Driver node rank is 8192
+    Driver node flags are 00002240
+        Inf is digitally signed
+DISPLAY\IN-KCH-8XX-CHIPSETS\4&2E7680EF&0&80863C61&00&02
+    Name: Intel(R) Graphics Chipset (KCH) Driver
+    Setup Class: {D07AF4AC-3BED-458D-9A68-380F23572661} IntelUnifiedDisplayDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        {D31A0762-0CEB-444e-ACFF-B049A1F6FE91}
+    Hardware IDs:
+        DISPLAY\IN-KCH-8XX-CHIPSETS
+    Compatible IDs:
+        DISPLAY\IN-KCH-8XX-CHIPSETS
+Driver node #0:
+    Inf file is c:\windows\inf\oem2.inf
+    Inf section is KCH.Device
+    Driver description is Intel(R) Graphics Chipset (KCH) Driver
+    Manufacturer name is Intel Corporation
+    Provider name is Intel
+    Driver date is 3/13/2003
+    Driver version is 6.13.1.3485
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+DISPLAY\IN-SB-8XX-PLATFORMS\4&2E7680EF&0&808639F1&00&02
+    Name: Intel(R) Graphics Platform (SoftBIOS) Driver
+    Setup Class: {D07AF4AC-3BED-458D-9A68-380F23572661} IntelUnifiedDisplayDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        {6080A529-897E-4629-A488-ABA0C29B635E}
+    Hardware IDs:
+        DISPLAY\IN-SB-8XX-PLATFORMS
+    Compatible IDs:
+        DISPLAY\IN-SB-8XX-PLATFORMS
+Driver node #0:
+    Inf file is c:\windows\inf\oem1.inf
+    Inf section is SoftBIOS.Device
+    Driver description is Intel(R) Graphics Platform (SoftBIOS) Driver
+    Manufacturer name is Intel Corporation
+    Provider name is Intel
+    Driver date is 3/13/2003
+    Driver version is 6.13.1.3485
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+FDC\GENERIC_FLOPPY_DRIVE\5&14BBD7CB&0&0
+    Name: Floppy disk drive
+    Setup Class: {4D36E980-E325-11CE-BFC1-08002BE10318} FloppyDisk
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        flpydisk
+    Hardware IDs:
+        FDC\GENERIC_FLOPPY_DRIVE
+    Compatible IDs:
+        GenFloppyDisk
+Driver node #0:
+    Inf file is c:\windows\inf\flpydisk.inf
+    Inf section is floppy_install
+    Driver description is Floppy disk drive
+    Manufacturer name is (Standard floppy disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8192
+    Driver node flags are 00002240
+        Inf is digitally signed
+FTDIBUS\VID_0403+PID_FB98+00000085A\0000
+    Name: USB Coin Dispenser Serial Port (COM4)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Driver is running.
+    Device is not using any resources.
+    Upper filters:
+        serenum
+    Controlling service:
+        FTSER2K
+    Hardware IDs:
+        FTDIBUS\COMPORT&VID_0403&PID_FB98
+Driver node #0:
+    Inf file is c:\windows\inf\oem28.inf
+    Inf section is FtdiPort232.NT
+    Driver description is USB Coin Dispenser Serial Port
+    Manufacturer name is FTDI
+    Provider name is FTDI
+    Driver date is 3/18/2011
+    Driver version is 2.8.14.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+HTREE\ROOT\0
+    Device is not set up.
+    Device is not present.
+    Controlling service:
+        (none)
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+IDE\CDROMSONY_CD-ROM_CDU5221_____________________1.02____\5&1F2D9038&0&0.0.0
+    Name: SONY CD-ROM CDU5221
+    Setup Class: {4D36E965-E325-11CE-BFC1-08002BE10318} CDROM
+    Driver is running.
+    Device is not using any resources.
+    Upper filters:
+        redbook
+    Controlling service:
+        cdrom
+    Hardware IDs:
+        IDE\CdRomSONY_CD-ROM_CDU5221_____________________1.02____
+        IDE\SONY_CD-ROM_CDU5221_____________________1.02____
+        IDE\CdRomSONY_CD-ROM_CDU5221_____________________
+        SONY_CD-ROM_CDU5221_____________________1.02____
+        GenCdRom
+    Compatible IDs:
+        GenCdRom
+Driver node #0:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdrom_install
+    Driver description is CD-ROM Drive
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdda_accurate_install
+    Driver description is CD-ROM Drive (force CDDA accurate)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdda_inaccurate_install
+    Driver description is CD-ROM Drive (force CDDA inaccurate)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #3:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_disable_install
+    Driver description is CD-ROM Drive (force IMAPI disable)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #4:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer1_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,1)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #5:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer2_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,2)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #6:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer3_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,3)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #7:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer4_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,4)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #8:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer5_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,5)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #9:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,0)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #10:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer1_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,1)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #11:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer2_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,2)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #12:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer3_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,3)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #13:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer4_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,4)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #14:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer5_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,5)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4100
+    Driver node flags are 00002240
+        Inf is digitally signed
+IDE\DISKST3802110A______________________________3.AAJ___\5&31E740DD&0&0.0.0
+    Name: ST3802110A
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        PartMgr
+    Controlling service:
+        disk
+    Hardware IDs:
+        IDE\DiskST3802110A______________________________3.AAJ___
+        IDE\ST3802110A______________________________3.AAJ___
+        IDE\DiskST3802110A______________________________
+        ST3802110A______________________________3.AAJ___
+        GenDisk
+    Compatible IDs:
+        GenDisk
+Driver node #0:
+    Inf file is c:\windows\inf\disk.inf
+    Inf section is disk_install
+    Driver description is Disk drive
+    Manufacturer name is (Standard disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4
+    Driver node flags are 00002240
+        Inf is digitally signed
+IDE\DISKWDC_WD100EB-00BHF0______________________15.15M15\4457572D414D3137373335323133_037_0_0_0_0
+    Name: WDC WD100EB-00BHF0
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Device is not present.
+    Upper class filters:
+        PartMgr
+    Controlling service:
+        disk
+    Hardware IDs:
+        IDE\DiskWDC_WD100EB-00BHF0______________________15.15M15
+        IDE\WDC_WD100EB-00BHF0______________________15.15M15
+        IDE\DiskWDC_WD100EB-00BHF0______________________
+        WDC_WD100EB-00BHF0______________________15.15M15
+        GenDisk
+    Compatible IDs:
+        GenDisk
+Driver node #0:
+    Inf file is c:\windows\inf\disk.inf
+    Inf section is disk_install
+    Driver description is Disk drive
+    Manufacturer name is (Standard disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4
+    Driver node flags are 00002240
+        Inf is digitally signed
+IDE\DISKWDC_WD800BB-55JKC0______________________05.01C05\5&1F2D9038&0&0.1.0
+    Name: WDC WD800BB-55JKC0
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        PartMgr
+    Controlling service:
+        disk
+    Hardware IDs:
+        IDE\DiskWDC_WD800BB-55JKC0______________________05.01C05
+        IDE\WDC_WD800BB-55JKC0______________________05.01C05
+        IDE\DiskWDC_WD800BB-55JKC0______________________
+        WDC_WD800BB-55JKC0______________________05.01C05
+        GenDisk
+    Compatible IDs:
+        GenDisk
+Driver node #0:
+    Inf file is c:\windows\inf\disk.inf
+    Inf section is disk_install
+    Driver description is Disk drive
+    Manufacturer name is (Standard disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4
+    Driver node flags are 00002240
+        Inf is digitally signed
+ISAPNP\READDATAPORT\0
+    Name: ISAPNP Read Data Port
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0a79-0a79
+        IO  : 0279-0279
+        IO  : 0274-0277
+    Controlling service:
+        (none)
+    Hardware IDs:
+        ISAPNP\ReadDataPort
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is ISAPNP Read Data Port
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+LPTENUM\MICROSOFTRAWPORT\5&7CE1BCF&0&LPT1
+    Name: Printer Port Logical Interface
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        LPTENUM\MicrosoftRawPort958A
+        MicrosoftRawPort958A
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is Printer Port Logical Interface
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_1051&SUBSYS_E0001458&REV_02\4&1F7DBC9F&0&40F0
+    Name: Intel(R) PRO/100 VE Network Connection
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is currently using the following resources:
+        MEM : f8000000-f8000fff
+        IO  : a000-a03f
+        IRQ : 20
+    Controlling service:
+        E100B
+    Hardware IDs:
+        PCI\VEN_8086&DEV_1051&SUBSYS_E0001458&REV_02
+        PCI\VEN_8086&DEV_1051&SUBSYS_E0001458
+        PCI\VEN_8086&DEV_1051&CC_020000
+        PCI\VEN_8086&DEV_1051&CC_0200
+    Compatible IDs:
+        PCI\VEN_8086&DEV_1051&REV_02
+        PCI\VEN_8086&DEV_1051
+        PCI\VEN_8086&CC_020000
+        PCI\VEN_8086&CC_0200
+        PCI\VEN_8086
+        PCI\CC_020000
+        PCI\CC_0200
+Driver node #0:
+    Inf file is c:\windows\inf\oem19.inf
+    Inf section is XP_D110K.ndi
+    Driver description is Intel(R) PRO/100 VE Network Connection
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 3/4/2003
+    Driver version is 7.0.26.0
+    Driver node rank is 8193
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_244E&SUBSYS_00000000&REV_C2\3&13C0B0C5&0&F0
+    Name: Intel(R) 82801EB PCI Bridge - 244E
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        pci
+    Hardware IDs:
+        PCI\VEN_8086&DEV_244E&SUBSYS_00000000&REV_C2
+        PCI\VEN_8086&DEV_244E&SUBSYS_00000000
+        PCI\VEN_8086&DEV_244E&REV_C2
+        PCI\VEN_8086&DEV_244E
+        PCI\VEN_8086&DEV_244E&CC_060400
+        PCI\VEN_8086&DEV_244E&CC_0604
+    Compatible IDs:
+        PCI\VEN_8086&CC_060400
+        PCI\VEN_8086&CC_0604
+        PCI\VEN_8086
+        PCI\CC_060400
+        PCI\CC_0604
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is PCI_DRV
+    Driver description is PCI standard PCI-to-PCI bridge
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8196
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is PCI_DRV
+    Driver description is Intel(R) 82801 PCI Bridge - 244E
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 3
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\ich5core.inf
+    Inf section is INTEL_PCI
+    Driver description is Intel(R) 82801EB PCI Bridge - 244E
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 1/15/2003
+    Driver version is 5.0.1006.0
+    Driver node rank is 3
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24D0&SUBSYS_00000000&REV_02\3&13C0B0C5&0&F8
+    Name: Intel(R) 82801EB LPC Interface Controller - 24D0
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        isapnp
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24D0&SUBSYS_00000000&REV_02
+        PCI\VEN_8086&DEV_24D0&SUBSYS_00000000
+        PCI\VEN_8086&DEV_24D0&REV_02
+        PCI\VEN_8086&DEV_24D0
+        PCI\VEN_8086&DEV_24D0&CC_060100
+        PCI\VEN_8086&DEV_24D0&CC_0601
+    Compatible IDs:
+        PCI\VEN_8086&CC_060100
+        PCI\VEN_8086&CC_0601
+        PCI\VEN_8086
+        PCI\CC_060100
+        PCI\CC_0601
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is ISAPNP_DRV
+    Driver description is PCI standard ISA bridge
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8196
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is ISAPNP_DRV
+    Driver description is Intel(R) 82801EB LPC Interface Controller - 24D0
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 3
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\ich5core.inf
+    Inf section is INTEL_ISAPNP
+    Driver description is Intel(R) 82801EB LPC Interface Controller - 24D0
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 1/15/2003
+    Driver version is 5.0.1006.0
+    Driver node rank is 3
+    Driver node flags are 00002245
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24D2&SUBSYS_24D21458&REV_02\3&13C0B0C5&0&E8
+    Name: Intel(R) 82801EB USB Universal Host Controller - 24D2
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : b000-b01f
+        IRQ : 16
+    Controlling service:
+        usbuhci
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24D2&SUBSYS_24D21458&REV_02
+        PCI\VEN_8086&DEV_24D2&SUBSYS_24D21458
+        PCI\VEN_8086&DEV_24D2&CC_0C0300
+        PCI\VEN_8086&DEV_24D2&CC_0C03
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24D2&REV_02
+        PCI\VEN_8086&DEV_24D2
+        PCI\VEN_8086&CC_0C0300
+        PCI\VEN_8086&CC_0C03
+        PCI\VEN_8086
+        PCI\CC_0C0300
+        PCI\CC_0C03
+Driver node #0:
+    Inf file is c:\windows\inf\ich5usb.inf
+    Inf section is INTEL_USB
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24D2
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 6/25/2003
+    Driver version is 5.0.2.1001
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24D2
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Standard Universal PCI to USB Host Controller
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8197
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24D3&SUBSYS_24D21458&REV_02\3&13C0B0C5&0&FB
+    Name: Intel(R) 82801EB SMBus Controller - 24D3
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Device is currently stopped.
+    Device has the following reserved resources:
+        IO  : 1400-141f
+        IRQ : 5
+    Controlling service:
+        (none)
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24D3&SUBSYS_24D21458&REV_02
+        PCI\VEN_8086&DEV_24D3&SUBSYS_24D21458
+        PCI\VEN_8086&DEV_24D3&CC_0C0500
+        PCI\VEN_8086&DEV_24D3&CC_0C05
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24D3&REV_02
+        PCI\VEN_8086&DEV_24D3
+        PCI\VEN_8086&CC_0C0500
+        PCI\VEN_8086&CC_0C05
+        PCI\VEN_8086
+        PCI\CC_0C0500
+        PCI\CC_0C05
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is Intel(R) 82801EB SMBus Controller - 24D3
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\ich5core.inf
+    Inf section is NO_DRV
+    Driver description is Intel(R) 82801EB SMBus Controller - 24D3
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 1/15/2003
+    Driver version is 5.0.1006.0
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24D4&SUBSYS_24D21458&REV_02\3&13C0B0C5&0&E9
+    Name: Intel(R) 82801EB USB Universal Host Controller - 24D4
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : b400-b41f
+        IRQ : 19
+    Controlling service:
+        usbuhci
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24D4&SUBSYS_24D21458&REV_02
+        PCI\VEN_8086&DEV_24D4&SUBSYS_24D21458
+        PCI\VEN_8086&DEV_24D4&CC_0C0300
+        PCI\VEN_8086&DEV_24D4&CC_0C03
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24D4&REV_02
+        PCI\VEN_8086&DEV_24D4
+        PCI\VEN_8086&CC_0C0300
+        PCI\VEN_8086&CC_0C03
+        PCI\VEN_8086
+        PCI\CC_0C0300
+        PCI\CC_0C03
+Driver node #0:
+    Inf file is c:\windows\inf\ich5usb.inf
+    Inf section is INTEL_USB
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24D4
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 6/25/2003
+    Driver version is 5.0.2.1001
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24D4
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Standard Universal PCI to USB Host Controller
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8197
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24D5&SUBSYS_A0021458&REV_02\3&13C0B0C5&0&FD
+    Name: Realtek AC'97 Audio
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : dc00-dcff
+        IO  : e000-e03f
+        MEM : f8181000-f81811ff
+        MEM : f8182000-f81820ff
+        IRQ : 17
+    Upper filters:
+        ALCXSENS
+    Controlling service:
+        ALCXWDM
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24D5&SUBSYS_A0021458&REV_02
+        PCI\VEN_8086&DEV_24D5&SUBSYS_A0021458
+        PCI\VEN_8086&DEV_24D5&CC_040100
+        PCI\VEN_8086&DEV_24D5&CC_0401
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24D5&REV_02
+        PCI\VEN_8086&DEV_24D5
+        PCI\VEN_8086&CC_040100
+        PCI\VEN_8086&CC_0401
+        PCI\VEN_8086
+        PCI\CC_040100
+        PCI\CC_0401
+Driver node #0:
+    Inf file is c:\windows\inf\oem20.inf
+    Inf section is AC97AUD
+    Driver description is Realtek AC'97 Audio
+    Manufacturer name is Realtek
+    Provider name is Realtek Semiconductor Corp.
+    Driver date is 8/21/2003
+    Driver version is 5.10.0.5320
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24D7&SUBSYS_24D21458&REV_02\3&13C0B0C5&0&EA
+    Name: Intel(R) 82801EB USB Universal Host Controller - 24D7
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : b800-b81f
+        IRQ : 18
+    Controlling service:
+        usbuhci
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24D7&SUBSYS_24D21458&REV_02
+        PCI\VEN_8086&DEV_24D7&SUBSYS_24D21458
+        PCI\VEN_8086&DEV_24D7&CC_0C0300
+        PCI\VEN_8086&DEV_24D7&CC_0C03
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24D7&REV_02
+        PCI\VEN_8086&DEV_24D7
+        PCI\VEN_8086&CC_0C0300
+        PCI\VEN_8086&CC_0C03
+        PCI\VEN_8086
+        PCI\CC_0C0300
+        PCI\CC_0C03
+Driver node #0:
+    Inf file is c:\windows\inf\ich5usb.inf
+    Inf section is INTEL_USB
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24D7
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 6/25/2003
+    Driver version is 5.0.2.1001
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24D7
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Standard Universal PCI to USB Host Controller
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8197
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24DB&SUBSYS_24D21458&REV_02\3&13C0B0C5&0&F9
+    Name: Intel(R) 82801EB Ultra ATA Storage Controllers
+    Setup Class: {4D36E96A-E325-11CE-BFC1-08002BE10318} hdc
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : f000-f00f
+        MEM : febffc00-febfffff
+    Controlling service:
+        pciide
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24DB&SUBSYS_24D21458&REV_02
+        PCI\VEN_8086&DEV_24DB&SUBSYS_24D21458
+        PCI\VEN_8086&DEV_24DB&CC_01018A
+        PCI\VEN_8086&DEV_24DB&CC_0101
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24DB&REV_02
+        PCI\VEN_8086&DEV_24DB
+        PCI\VEN_8086&CC_01018A
+        PCI\VEN_8086&CC_0101
+        PCI\VEN_8086
+        PCI\CC_01018A
+        PCI\CC_0101
+Driver node #0:
+    Inf file is c:\windows\inf\ich5ide.inf
+    Inf section is intelide
+    Driver description is Intel(R) 82801EB Ultra ATA Storage Controllers
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 1/15/2003
+    Driver version is 5.0.1007.0
+    Driver node rank is 8193
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\mshdc.inf
+    Inf section is intelide_Inst
+    Driver description is Intel(R) 82801EB Ultra ATA Storage Controllers - 24DB
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8193
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\mshdc.inf
+    Inf section is pciide_Inst
+    Driver description is Standard Dual Channel PCI IDE Controller
+    Manufacturer name is (Standard IDE ATA/ATAPI controllers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 12294
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24DD&SUBSYS_50061458&REV_02\3&13C0B0C5&0&EF
+    Name: Intel(R) 82801EB USB2 Enhanced Host Controller - 24DD
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is currently using the following resources:
+        MEM : f8180000-f81803ff
+        IRQ : 23
+    Controlling service:
+        usbehci
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24DD&SUBSYS_50061458&REV_02
+        PCI\VEN_8086&DEV_24DD&SUBSYS_50061458
+        PCI\VEN_8086&DEV_24DD&CC_0C0320
+        PCI\VEN_8086&DEV_24DD&CC_0C03
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24DD&REV_02
+        PCI\VEN_8086&DEV_24DD
+        PCI\VEN_8086&CC_0C0320
+        PCI\VEN_8086&CC_0C03
+        PCI\VEN_8086
+        PCI\CC_0C0320
+        PCI\CC_0C03
+Driver node #0:
+    Inf file is c:\windows\inf\ich5usb.inf
+    Inf section is INTEL_USB2
+    Driver description is Intel(R) 82801EB USB2 Enhanced Host Controller - 24DD
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 6/25/2003
+    Driver version is 5.0.2.1001
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is EHCI.Dev
+    Driver description is Intel(R) 82801EB USB2 Enhanced Host Controller - 24DD
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 6/1/2002
+    Driver version is 5.1.2600.0
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is EHCI.Dev
+    Driver description is Standard Enhanced PCI to USB Host Controller
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 6/1/2002
+    Driver version is 5.1.2600.0
+    Driver node rank is 8197
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_24DE&SUBSYS_24D21458&REV_02\3&13C0B0C5&0&EB
+    Name: Intel(R) 82801EB USB Universal Host Controller - 24DE
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : bc00-bc1f
+        IRQ : 16
+    Controlling service:
+        usbuhci
+    Hardware IDs:
+        PCI\VEN_8086&DEV_24DE&SUBSYS_24D21458&REV_02
+        PCI\VEN_8086&DEV_24DE&SUBSYS_24D21458
+        PCI\VEN_8086&DEV_24DE&CC_0C0300
+        PCI\VEN_8086&DEV_24DE&CC_0C03
+    Compatible IDs:
+        PCI\VEN_8086&DEV_24DE&REV_02
+        PCI\VEN_8086&DEV_24DE
+        PCI\VEN_8086&CC_0C0300
+        PCI\VEN_8086&CC_0C03
+        PCI\VEN_8086
+        PCI\CC_0C0300
+        PCI\CC_0C03
+Driver node #0:
+    Inf file is c:\windows\inf\ich5usb.inf
+    Inf section is INTEL_USB
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24DE
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 6/25/2003
+    Driver version is 5.0.2.1001
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Intel(R) 82801EB USB Universal Host Controller - 24DE
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8193
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is UHCI.Dev
+    Driver description is Standard Universal PCI to USB Host Controller
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8197
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_2570&SUBSYS_00000000&REV_02\3&13C0B0C5&0&00
+    Name: Intel(R) 82865G/PE/P/GV/82848P Processor to I/O Controller - 2570
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        PCI\VEN_8086&DEV_2570&SUBSYS_00000000&REV_02
+        PCI\VEN_8086&DEV_2570&SUBSYS_00000000
+        PCI\VEN_8086&DEV_2570&REV_02
+        PCI\VEN_8086&DEV_2570
+        PCI\VEN_8086&DEV_2570&CC_060000
+        PCI\VEN_8086&DEV_2570&CC_0600
+    Compatible IDs:
+        PCI\VEN_8086&CC_060000
+        PCI\VEN_8086&CC_0600
+        PCI\VEN_8086
+        PCI\CC_060000
+        PCI\CC_0600
+Driver node #0:
+    Inf file is c:\windows\inf\865.inf
+    Inf section is NO_DRV
+    Driver description is Intel(R) 82865G/PE/P/GV/82848P Processor to I/O Controller - 2570
+    Manufacturer name is Intel
+    Provider name is Intel
+    Driver date is 7/15/2003
+    Driver version is 5.0.2.1002
+    Driver node rank is 3
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is Intel(R) 82865G/PE/P/GV/82848P Processor to I/O Controller - 2570
+    Manufacturer name is Intel
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 3
+    Driver node flags are 00002245
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is NO_DRV
+    Driver description is PCI standard host CPU bridge
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 8196
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCI\VEN_8086&DEV_2572&SUBSYS_25721458&REV_02\3&13C0B0C5&0&10
+    Name: Intel(R) 82865G Graphics Controller
+    Setup Class: {4D36E968-E325-11CE-BFC1-08002BE10318} Display
+    Driver is running.
+    Device is currently using the following resources:
+        MEM : f0000000-f7ffffff
+        MEM : f8100000-f817ffff
+        IO  : c000-c007
+        IRQ : 16
+        IO  : 03b0-03bb
+        IO  : 03c0-03df
+        MEM : 000a0000-000bffff
+    Controlling service:
+        ialm
+    Hardware IDs:
+        PCI\VEN_8086&DEV_2572&SUBSYS_25721458&REV_02
+        PCI\VEN_8086&DEV_2572&SUBSYS_25721458
+        PCI\VEN_8086&DEV_2572&CC_030000
+        PCI\VEN_8086&DEV_2572&CC_0300
+    Compatible IDs:
+        PCI\VEN_8086&DEV_2572&REV_02
+        PCI\VEN_8086&DEV_2572
+        PCI\VEN_8086&CC_030000
+        PCI\VEN_8086&CC_0300
+        PCI\VEN_8086
+        PCI\CC_030000
+        PCI\CC_0300
+Driver node #0:
+    Inf file is c:\windows\inf\oem0.inf
+    Inf section is iSPDG
+    Driver description is Intel(R) 82865G Graphics Controller
+    Manufacturer name is Intel Corporation
+    Provider name is Intel Corporation
+    Driver date is 3/13/2003
+    Driver version is 6.13.1.3485
+    Driver node rank is 8193
+    Driver node flags are 00002240
+        Inf is digitally signed
+PCIIDE\IDECHANNEL\4&129B8644&0&0
+    Name: Primary IDE Channel
+    Setup Class: {4D36E96A-E325-11CE-BFC1-08002BE10318} hdc
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 01f0-01f7
+        IO  : 03f6-03f6
+        IRQ : 14
+    Controlling service:
+        atapi
+    Hardware IDs:
+        Intel-24db
+        Primary_IDE_Channel
+        *PNP0600
+    Compatible IDs:
+        *PNP0600
+Driver node #0:
+    Inf file is c:\windows\inf\mshdc.inf
+    Inf section is atapi_Inst_primary
+    Driver description is Primary IDE Channel
+    Manufacturer name is (Standard IDE ATA/ATAPI controllers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\mshdc.inf
+    Inf section is atapi_Inst
+    Driver description is Standard IDE/ESDI Hard Disk Controller
+    Manufacturer name is (Standard IDE ATA/ATAPI controllers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+PCIIDE\IDECHANNEL\4&129B8644&0&1
+    Name: Secondary IDE Channel
+    Setup Class: {4D36E96A-E325-11CE-BFC1-08002BE10318} hdc
+    Driver is running.
+    Device is currently using the following resources:
+        IO  : 0170-0177
+        IO  : 0376-0376
+        IRQ : 15
+    Controlling service:
+        atapi
+    Hardware IDs:
+        Intel-24db
+        Secondary_IDE_Channel
+        *PNP0600
+    Compatible IDs:
+        *PNP0600
+Driver node #0:
+    Inf file is c:\windows\inf\mshdc.inf
+    Inf section is atapi_Inst_secondary
+    Driver description is Secondary IDE Channel
+    Manufacturer name is (Standard IDE ATA/ATAPI controllers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\mshdc.inf
+    Inf section is atapi_Inst
+    Driver description is Standard IDE/ESDI Hard Disk Controller
+    Manufacturer name is (Standard IDE ATA/ATAPI controllers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\*DSFKSVCS\0000
+    Name: Kernel Services for DSF
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        DSFKSVCS
+    Hardware IDs:
+        ROOT\DSFKSVCS
+Driver node #0:
+    Inf file is c:\windows\inf\oem24.inf
+    Inf section is DSFKSVCS_DRV
+    Driver description is Kernel Services for DSF
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 2/8/2010
+    Driver version is 16.10.54.258
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\*DSFROOT\0000
+    Name: DsfRoot for DSF
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        dsfroot
+    Hardware IDs:
+        ROOT\DSFROOT
+Driver node #0:
+    Inf file is c:\windows\inf\oem25.inf
+    Inf section is DsfRoot_Device
+    Driver description is DsfRoot for DSF
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 2/8/2010
+    Driver version is 16.10.54.351
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\ACPI_HAL\0000
+    Name: ACPI Uniprocessor PC
+    Setup Class: {4D36E966-E325-11CE-BFC1-08002BE10318} Computer
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        \Driver\ACPI_HAL
+    Hardware IDs:
+        acpiapic_up
+    Compatible IDs:
+        DETECTEDInternal\ACPI_HAL
+        DETECTED\ACPI_HAL
+Driver node #0:
+    Inf file is c:\windows\inf\hal.inf
+    Inf section is E_ISA_UP_HAL
+    Driver description is Standard PC
+    Manufacturer name is (Standard computers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4096
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\hal.inf
+    Inf section is ACPIPIC_UP_HAL
+    Driver description is Advanced Configuration and Power Interface (ACPI) PC
+    Manufacturer name is (Standard computers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4096
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\hal.inf
+    Inf section is ACPIAPIC_UP_HAL
+    Driver description is ACPI Uniprocessor PC
+    Manufacturer name is (Standard computers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #3:
+    Inf file is c:\windows\inf\hal.inf
+    Inf section is ACPIAPIC_MP_HAL
+    Driver description is ACPI Multiprocessor PC
+    Manufacturer name is (Standard computers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4096
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #4:
+    Inf file is c:\windows\inf\hal.inf
+    Inf section is MPS_UP_HAL
+    Driver description is MPS Uniprocessor PC
+    Manufacturer name is (Standard computers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4096
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #5:
+    Inf file is c:\windows\inf\hal.inf
+    Inf section is MPS_MP_HAL
+    Driver description is MPS Multiprocessor PC
+    Manufacturer name is (Standard computers)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 4096
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\DMIO\0000
+    Name: Logical Disk Manager
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        dmio
+    Hardware IDs:
+        ROOT\DMIO
+    Compatible IDs:
+        DETECTEDInternal\dmio
+        DETECTED\dmio
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is DMIO_DRV
+    Driver description is Logical Disk Manager
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\FTDISK\0000
+    Name: Volume Manager
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        ftdisk
+    Hardware IDs:
+        ROOT\FTDISK
+    Compatible IDs:
+        DETECTEDInternal\ftdisk
+        DETECTED\ftdisk
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is FTDISK_DRV
+    Driver description is Volume Manager
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\LEGACY_AFD\0000
+    Name: AFD
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        AFD
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_ALG\0000
+    Name: Application Layer Gateway Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        ALG
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_APPMGMT\0000
+    Name: Application Management
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        AppMgmt
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_AUDIOSRV\0000
+    Name: Windows Audio
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        AudioSrv
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_BEEP\0000
+    Name: Beep
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Beep
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_BROWSER\0000
+    Name: Computer Browser
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Browser
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_CDFS\0000
+    Name: cdfs
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        cdfs
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_CLR_OPTIMIZATION_V2.0.50727_32\0000
+    Name: .NET Runtime Optimization Service v2.0.50727_X86
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        clr_optimization_v2.0.50727_32
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_CLR_OPTIMIZATION_V4.0.30319_32\0000
+    Name: Microsoft .NET Framework NGEN v4.0.30319_X86
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        clr_optimization_v4.0.30319_32
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_COMSYSAPP\0000
+    Name: COM+ System Application
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        COMSysApp
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_CRYPTSVC\0000
+    Name: Cryptographic Services
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        CryptSvc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DBGV\0000
+    Name: DBGV
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        DBGV
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DCOMLAUNCH\0000
+    Name: DCOM Server Process Launcher
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        DcomLaunch
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DHCP\0000
+    Name: DHCP Client
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Dhcp
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DIEBOLD_DEVICES_SERVICE\0000
+    Name: Diebold Devices Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Diebold Devices Service
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DIEBOLD_TPM_SERVICE\0000
+    Name: Diebold TPM Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Diebold TPM Service
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DIEBOLD_XFS\0000
+    Name: Diebold XFS
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Diebold XFS
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DMADMIN\0000
+    Name: Logical Disk Manager Administrative Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        dmadmin
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DMBOOT\0000
+    Name: dmboot
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        dmboot
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DMLOAD\0000
+    Name: dmload
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        dmload
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DMSERVER\0000
+    Name: Logical Disk Manager
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        dmserver
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_DNSCACHE\0000
+    Name: DNS Client
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Dnscache
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_EPSONPURAS\0000
+    Name: Epson Puras Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        EpsonPuras
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_EPSONPURASLOG\0000
+    Name: Epson Puras Log Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        EpsonPurasLog
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_EPSON_TM_PARALLEL_PORT_DRIVER\0000
+    Name: EPSON TM Parallel Port Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        EPSON TM Parallel Port Driver
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_ERSVC\0000
+    Name: Error Reporting Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        ERSvc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_EVENTSYSTEM\0000
+    Name: COM+ Event System
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        EventSystem
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_FASTFAT\0000
+    Name: fastfat
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        fastfat
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_FASTUSERSWITCHINGCOMPATIBILITY\0000
+    Name: Fast User Switching Compatibility
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        FastUserSwitchingCompatibility
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_FIPS\0000
+    Name: Fips
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Fips
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_FLTMGR\0000
+    Name: FltMgr
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        FltMgr
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_FONTCACHE3.0.0.0\0000
+    Name: Windows Presentation Foundation Font Cache 3.0.0.0
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        FontCache3.0.0.0
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_FS_REC\0000
+    Name: Fs_Rec
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Fs_Rec
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_GPC\0000
+    Name: Generic Packet Classifier
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Gpc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_HELPSVC\0000
+    Name: Help and Support
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        helpsvc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_HTTP\0000
+    Name: HTTP
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        HTTP
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_INTELIDE\0000
+    Name: IntelIde
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        IntelIde
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_IPNAT\0000
+    Name: IP Network Address Translator
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        IpNat
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_IPSEC\0000
+    Name: IPSEC driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        IPSec
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_KSECDD\0000
+    Name: ksecdd
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        ksecdd
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_LANMANSERVER\0000
+    Name: Server
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        lanmanserver
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_LANMANWORKSTATION\0000
+    Name: Workstation
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        LanmanWorkstation
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_LMHOSTS\0000
+    Name: TCP/IP NetBIOS Helper
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        LmHosts
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_LOGWRITER\0000
+    Name: Diebold Agilis LogWriter
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        LogWriter
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MNMDD\0000
+    Name: mnmdd
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        mnmdd
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MOUNTMGR\0000
+    Name: mountmgr
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        mountmgr
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MPFILTER\0000
+    Name: Microsoft Malware Protection Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MpFilter
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MRXDAV\0000
+    Name: WebDav Client Redirector
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MRxDAV
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MRXSMB\0000
+    Name: MRXSMB
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MRxSmb
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MSDTC\0000
+    Name: Distributed Transaction Coordinator
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MSDTC
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MSFS\0000
+    Name: Msfs
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Msfs
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MSISERVER\0000
+    Name: Windows Installer
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MSIServer
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MSMPSVC\0000
+    Name: Microsoft Antimalware Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MsMpSvc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MSSQL$SQLEXPRESS\0000
+    Name: SQL Server (SQLEXPRESS)
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        MSSQL$SQLEXPRESS
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_MUP\0000
+    Name: Mup
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Mup
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NDIS\0000
+    Name: NDIS System Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        NDIS
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NDISTAPI\0000
+    Name: Remote Access NDIS TAPI Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        NdisTapi
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NDISUIO\0000
+    Name: NDIS Usermode I/O Protocol
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Ndisuio
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NDPROXY\0000
+    Name: NDProxy
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        NDProxy
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NETBIOS\0000
+    Name: NetBIOS Interface
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        NetBIOS
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NETBT\0000
+    Name: NetBios over Tcpip
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        NetBT
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NETMAN\0000
+    Name: Network Connections
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Netman
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NLA\0000
+    Name: Network Location Awareness (NLA)
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Nla
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NPFS\0000
+    Name: Npfs
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Npfs
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NTFS\0000
+    Name: ntfs
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        ntfs
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_NULL\0000
+    Name: Null
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Null
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_PARTMGR\0000
+    Name: PartMgr
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        PartMgr
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_PARVDM\0000
+    Name: ParVdm
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        ParVdm
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_POLICYAGENT\0000
+    Name: IPSEC Services
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        PolicyAgent
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_PROCEXP152\0000
+    Name: PROCEXP152
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        PROCEXP152
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_PROCMON23\0000
+    Name: PROCMON23
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        PROCMON23
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_PROTECTEDSTORAGE\0000
+    Name: Protected Storage
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        ProtectedStorage
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_RASACD\0000
+    Name: Remote Access Auto Connection Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        RasAcd
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_RASMAN\0000
+    Name: Remote Access Connection Manager
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        RasMan
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_RDBSS\0000
+    Name: Rdbss
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Rdbss
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_RDPCDD\0000
+    Name: RDPCDD
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        RDPCDD
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_RDPNP\0000
+    Name: RDPNP
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        RDPNP
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_REMOTEREGISTRY\0000
+    Name: Remote Registry
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        RemoteRegistry
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_RPCSS\0000
+    Name: Remote Procedure Call (RPC)
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        RpcSs
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SAMSS\0000
+    Name: Security Accounts Manager
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SamSs
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SCHEDULE\0000
+    Name: Task Scheduler
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Schedule
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SECLOGON\0000
+    Name: Secondary Logon
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        seclogon
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SENS\0000
+    Name: System Event Notification
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SENS
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SHAREDACCESS\0000
+    Name: Windows Firewall/Internet Connection Sharing (ICS)
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SharedAccess
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SHELLHWDETECTION\0000
+    Name: Shell Hardware Detection
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        ShellHWDetection
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SNMP\0000
+    Name: SNMP Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SNMP
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SNMPTRAP\0000
+    Name: SNMP Trap Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SNMPTRAP
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SPOOLER\0000
+    Name: Print Spooler
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Spooler
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SQLWRITER\0000
+    Name: SQL Server VSS Writer
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SQLWriter
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SR\0000
+    Name: System Restore Filter Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        sr
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SRSERVICE\0000
+    Name: System Restore Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        srservice
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SRV\0000
+    Name: Srv
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Srv
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_SSDPSRV\0000
+    Name: SSDP Discovery Service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        SSDPSRV
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_STISVC\0000
+    Name: Windows Image Acquisition (WIA)
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        stisvc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_TAPISRV\0000
+    Name: Telephony
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        TapiSrv
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_TCPIP\0000
+    Name: TCP/IP Protocol Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Tcpip
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_TERMSERVICE\0000
+    Name: Terminal Services
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        TermService
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_THEMES\0000
+    Name: Themes
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        Themes
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_TRKWKS\0000
+    Name: Distributed Link Tracking Client
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        TrkWks
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_VGA\0000
+    Name: vga
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        vga
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_VGASAVE\0000
+    Name: VgaSave
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        VgaSave
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_VOLSNAP\0000
+    Name: VolSnap
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        VolSnap
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_W32TIME\0000
+    Name: Windows Time
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        W32Time
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WANARP\0000
+    Name: Remote Access IP ARP Driver
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Wanarp
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WDF01000\0000
+    Name: Kernel Mode Driver Frameworks service
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Wdf01000
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WEBCLIENT\0000
+    Name: WebClient
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        WebClient
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WINMGMT\0000
+    Name: Windows Management Instrumentation
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        winmgmt
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WPFFONTCACHE_V0400\0000
+    Name: Windows Presentation Foundation Font Cache 4.0.0.0
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        WPFFontCache_v0400
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WSCSVC\0000
+    Name: Security Center
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        wscsvc
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WUAUSERV\0000
+    Name: Automatic Updates
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        wuauserv
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\LEGACY_WZCSVC\0000
+    Name: Wireless Zero Configuration
+    Setup Class: {8ECC055D-047F-11D1-A537-0000F8753ED1} LegacyDriver
+    Device is not present.
+    Controlling service:
+        WZCSVC
+    No hardware/compatible IDs found for this device.
+    No driver nodes found for this device.
+ROOT\MEDIA\MS_MMACM
+    Name: Audio Codecs
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        audstub
+    Hardware IDs:
+        MS_MMACM
+Driver node #0:
+    Inf file is c:\windows\inf\wave.inf
+    Inf section is MS_MMACM
+    Driver description is Audio Codecs
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\MEDIA\MS_MMDRV
+    Name: Legacy Audio Drivers
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        audstub
+    Hardware IDs:
+        MS_MMDRV
+Driver node #0:
+    Inf file is c:\windows\inf\wave.inf
+    Inf section is MS_MMDRV
+    Driver description is Legacy Audio Drivers
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\MEDIA\MS_MMMCI
+    Name: Media Control Devices
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        audstub
+    Hardware IDs:
+        MS_MMMCI
+Driver node #0:
+    Inf file is c:\windows\inf\wave.inf
+    Inf section is MS_MMMCI
+    Driver description is Media Control Devices
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\MEDIA\MS_MMVCD
+    Name: Legacy Video Capture Devices
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        audstub
+    Hardware IDs:
+        MS_MMVCD
+Driver node #0:
+    Inf file is c:\windows\inf\wave.inf
+    Inf section is MS_MMVCD
+    Driver description is Legacy Video Capture Devices
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\MEDIA\MS_MMVID
+    Name: Video Codecs
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        audstub
+    Hardware IDs:
+        MS_MMVID
+Driver node #0:
+    Inf file is c:\windows\inf\wave.inf
+    Inf section is MS_MMVID
+    Driver description is Video Codecs
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+ROOT\MS_L2TPMINIPORT\0000
+    Name: WAN Miniport (L2TP)
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Rasl2tp
+    Hardware IDs:
+        ms_l2tpminiport
+Driver node #0:
+    Inf file is c:\windows\inf\netrasa.inf
+    Inf section is Ndi-Mp-L2tp
+    Driver description is WAN Miniport (L2TP)
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\MS_NDISWANIP\0000
+    Name: WAN Miniport (IP)
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        NdisWan
+    Lower filters:
+        NdisTapi
+    Hardware IDs:
+        ms_ndiswanip
+Driver node #0:
+    Inf file is c:\windows\inf\netrasa.inf
+    Inf section is Ndi-Mp-Ip
+    Driver description is WAN Miniport (IP)
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\MS_PPPOEMINIPORT\0000
+    Name: WAN Miniport (PPPOE)
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        RasPppoe
+    Lower filters:
+        NdisTapi
+    Hardware IDs:
+        ms_pppoeminiport
+Driver node #0:
+    Inf file is c:\windows\inf\netrasa.inf
+    Inf section is Ndi-Mp-Pppoe
+    Driver description is WAN Miniport (PPPOE)
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\MS_PPTPMINIPORT\0000
+    Name: WAN Miniport (PPTP)
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        PptpMiniport
+    Lower filters:
+        NdisTapi
+    Hardware IDs:
+        ms_pptpminiport
+Driver node #0:
+    Inf file is c:\windows\inf\netrasa.inf
+    Inf section is Ndi-Mp-Pptp
+    Driver description is WAN Miniport (PPTP)
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\MS_PSCHEDMP\0000
+    Name: WAN Miniport (IP) - Packet Scheduler Miniport
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        PSched
+    Hardware IDs:
+        ms_pschedmp
+Driver node #0:
+    Inf file is c:\windows\inf\netpsa.inf
+    Inf section is PSchedMP.ndi
+    Driver description is Packet Scheduler Miniport
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\MS_PSCHEDMP\0001
+    Name: Intel(R) PRO/100 VE Network Connection - Packet Scheduler Miniport
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        PSched
+    Hardware IDs:
+        ms_pschedmp
+Driver node #0:
+    Inf file is c:\windows\inf\netpsa.inf
+    Inf section is PSchedMP.ndi
+    Driver description is Packet Scheduler Miniport
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\MS_PTIMINIPORT\0000
+    Name: Direct Parallel
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        Raspti
+    Lower filters:
+        PtiLink
+    Hardware IDs:
+        ms_ptiminiport
+Driver node #0:
+    Inf file is c:\windows\inf\netrasa.inf
+    Inf section is Ndi-Mp-Pti
+    Driver description is Direct Parallel
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\RDPDR\0000
+    Name: Terminal Server Device Redirector
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        rdpdr
+    Hardware IDs:
+        ROOT\RDPDR
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is RDPDR
+    Driver description is Terminal Server Device Redirector
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\RDP_KBD\0000
+    Name: Terminal Server Keyboard Driver
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Upper filters:
+        kbdclass
+    Controlling service:
+        TermDD
+    Hardware IDs:
+        ROOT\RDP_KBD
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is RDP_KBD
+    Driver description is Terminal Server Keyboard Driver
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\RDP_MOU\0000
+    Name: Terminal Server Mouse Driver
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Upper filters:
+        mouclass
+    Controlling service:
+        TermDD
+    Hardware IDs:
+        ROOT\RDP_MOU
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is RDP_MOU
+    Driver description is Terminal Server Mouse Driver
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\SYSTEM\0000
+    Name: Plug and Play Software Device Enumerator
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        swenum
+    Hardware IDs:
+        root\swenum
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is SWENUM
+    Driver description is Plug and Play Software Device Enumerator
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\SYSTEM\0001
+    Name: Microcode Update Device
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        update
+    Hardware IDs:
+        root\update
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is UPDATE_DRV
+    Driver description is Microcode Update Device
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+ROOT\SYSTEM\0002
+    Name: Microsoft System Management BIOS Driver
+    Setup Class: {4D36E97D-E325-11CE-BFC1-08002BE10318} System
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        mssmbios
+    Hardware IDs:
+        root\mssmbios
+Driver node #0:
+    Inf file is c:\windows\inf\machine.inf
+    Inf section is MSSMBIOS_DRV
+    Driver description is Microsoft System Management BIOS Driver
+    Manufacturer name is (Standard system devices)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+STORAGE\REMOVABLEMEDIA\7&1941C444&0&RM
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+    Compatible IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\REMOVABLEMEDIA\8&10DD02C0&0&RM
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+    Compatible IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\REMOVABLEMEDIA\8&18C331F8&0&RM
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+    Compatible IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREC1D1C1D1OFFSET7E00LENGTH7FFD5A400
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREC1D1C1D1OFFSET7FFD62200LENGTH7FFD62200
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREC1D1C1D1OFFSETFFFAC4400LENGTH2A21D3E00
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREC9D9C9D9OFFSET7E00LENGTH254290200
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREE0DDE0DDOFFSET7E00LENGTH94754DC00
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREE0DDE0DDOFFSET947555A00LENGTH1A90F4600
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREE0DDE0DDOFFSETAF064A000LENGTH7B164E200
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Device is not present.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREE891C13COFFSET7E00LENGTHCB2744E00
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+STORAGE\VOLUME\1&30A96598&0&SIGNATUREE891C13COFFSETCB274CC00LENGTH5EF54B600
+    Name: Generic volume
+    Setup Class: {71A27CDD-812A-11D0-BEC7-08002BE2092F} Volume
+    Driver is running.
+    Device is not using any resources.
+    Upper class filters:
+        VolSnap
+    Controlling service:
+        (none)
+    Hardware IDs:
+        STORAGE\Volume
+Driver node #0:
+    Inf file is c:\windows\inf\volume.inf
+    Inf section is volume_install
+    Driver description is Generic volume
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+SW\{2F412AB5-ED3A-4590-AB24-B0CE2AA77D3C}\{9B365890-165F-11D0-A195-0020AFD156E4}
+    Name: Microsoft Kernel Audio Splitter
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        splitter
+    Hardware IDs:
+        SW\{2f412ab5-ed3a-4590-ab24-b0ce2aa77d3c}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_SPLITTER
+    Driver description is Microsoft Kernel Audio Splitter
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{4245FF73-1DB4-11D2-86E4-98AE20524153}\{9B365890-165F-11D0-A195-0020AFD156E4}
+    Name: Microsoft Kernel Acoustic Echo Canceller
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        aec
+    Hardware IDs:
+        SW\{4245ff73-1db4-11d2-86e4-98ae20524153}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_AEC
+    Driver description is Microsoft Kernel Acoustic Echo Canceller
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{6C1B9F60-C0A9-11D0-96D8-00AA0051E51D}\{9B365890-165F-11D0-A195-0020AFD156E4}
+    Name: Microsoft Kernel GS Wavetable Synthesizer
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        swmidi
+    Hardware IDs:
+        SW\{6c1b9f60-c0a9-11d0-96d8-00aa0051e51d}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_SWMIDI
+    Driver description is Microsoft Kernel GS Wavetable Synthesizer
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{8C07DD50-7A8D-11D2-8F8C-00C04FBF8FEF}\DMUSIC
+    Name: Microsoft Kernel DLS Synthesizer
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        DMusic
+    Hardware IDs:
+        SW\{8c07dd50-7a8d-11d2-8f8c-00c04fbf8fef}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_DMUSIC
+    Driver description is Microsoft Kernel DLS Synthesizer
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{96E080C7-143C-11D1-B40F-00A0C9223196}\{3C0D501A-140B-11D1-B40F-00A0C9223196}
+    Name: Microsoft Streaming Service Proxy
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        MSKSSRV
+    Hardware IDs:
+        SW\{96e080c7-143c-11d1-b40f-00a0c9223196}
+Driver node #0:
+    Inf file is c:\windows\inf\ksfilter.inf
+    Inf section is MSKSSRV
+    Driver description is Microsoft Streaming Service Proxy
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{97EBAACC-95BD-11D0-A3EA-00A0C9223196}\{53172480-4791-11D0-A5D6-28DB04C10000}
+    Name: Microsoft Streaming Clock Proxy
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        MSPCLOCK
+    Hardware IDs:
+        SW\{97ebaacc-95bd-11d0-a3ea-00a0c9223196}
+Driver node #0:
+    Inf file is c:\windows\inf\ksfilter.inf
+    Inf section is MSPCLOCK
+    Driver description is Microsoft Streaming Clock Proxy
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{A7C7A5B0-5AF3-11D1-9CED-00A024BF0407}\{9B365890-165F-11D0-A195-0020AFD156E4}
+    Name: Microsoft Kernel System Audio Device
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        sysaudio
+    Hardware IDs:
+        SW\{a7c7a5b0-5af3-11d1-9ced-00a024bf0407}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_SYSAUDIO
+    Driver description is Microsoft Kernel System Audio Device
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{B7EAFDC0-A680-11D0-96D8-00AA0051E51D}\{9B365890-165F-11D0-A195-0020AFD156E4}
+    Name: Microsoft Kernel Wave Audio Mixer
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        kmixer
+    Hardware IDs:
+        SW\{b7eafdc0-a680-11d0-96d8-00aa0051e51d}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_KMIXER
+    Driver description is Microsoft Kernel Wave Audio Mixer
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{CD171DE3-69E5-11D2-B56D-0000F8754380}\{9B365890-165F-11D0-A195-0020AFD156E4}
+    Name: Microsoft WINMM WDM Audio Compatibility Driver
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        wdmaud
+    Hardware IDs:
+        SW\{cd171de3-69e5-11d2-b56d-0000f8754380}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_WDMAUD
+    Driver description is Microsoft WINMM WDM Audio Compatibility Driver
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{DDF4358E-BB2C-11D0-A42F-00A0C9223196}\{97EBAACB-95BD-11D0-A3EA-00A0C9223196}
+    Name: Microsoft Streaming Quality Manager Proxy
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        MSPQM
+    Hardware IDs:
+        SW\{ddf4358e-bb2c-11d0-a42f-00a0c9223196}
+Driver node #0:
+    Inf file is c:\windows\inf\ksfilter.inf
+    Inf section is MSPQM
+    Driver description is Microsoft Streaming Quality Manager Proxy
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{EEAB7790-C514-11D1-B42B-00805FC1270E}\ASYNCMAC
+    Name: RAS Async Adapter
+    Setup Class: {4D36E972-E325-11CE-BFC1-08002BE10318} Net
+    Device is not present.
+    Controlling service:
+        AsyncMac
+    Hardware IDs:
+        SW\{eeab7790-c514-11d1-b42b-00805fc1270e}
+Driver node #0:
+    Inf file is c:\windows\inf\netrasa.inf
+    Inf section is Ndi-Mp-AsyncMac
+    Driver description is RAS Async Adapter
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+SW\{EEC12DB6-AD9C-4168-8658-B03DAEF417FE}\{ABD61E00-9350-47E2-A632-4438B90C6641}
+    Name: Microsoft Kernel DRM Audio Descrambler
+    Setup Class: {4D36E96C-E325-11CE-BFC1-08002BE10318} MEDIA
+    Device is not present.
+    Controlling service:
+        drmkaud
+    Hardware IDs:
+        SW\{eec12db6-ad9c-4168-8658-b03daef417fe}
+Driver node #0:
+    Inf file is c:\windows\inf\wdmaudio.inf
+    Inf section is WDM_DRMKAUD
+    Driver description is Microsoft Kernel DRM Audio Descrambler
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\ROOT_HUB\4&1611BE1&0
+    Name: USB Root Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\ROOT_HUB&VID8086&PID24D7&REV0002
+        USB\ROOT_HUB&VID8086&PID24D7
+        USB\ROOT_HUB
+Driver node #0:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is ROOTHUB.Dev
+    Driver description is USB Root Hub
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\ROOT_HUB\4&169BB4E2&0
+    Name: USB Root Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\ROOT_HUB&VID8086&PID24DE&REV0002
+        USB\ROOT_HUB&VID8086&PID24DE
+        USB\ROOT_HUB
+Driver node #0:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is ROOTHUB.Dev
+    Driver description is USB Root Hub
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\ROOT_HUB\4&182EC3C&0
+    Name: USB Root Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\ROOT_HUB&VID8086&PID24D2&REV0002
+        USB\ROOT_HUB&VID8086&PID24D2
+        USB\ROOT_HUB
+Driver node #0:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is ROOTHUB.Dev
+    Driver description is USB Root Hub
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\ROOT_HUB\4&E147424&0
+    Name: USB Root Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\ROOT_HUB&VID8086&PID24D4&REV0002
+        USB\ROOT_HUB&VID8086&PID24D4
+        USB\ROOT_HUB
+Driver node #0:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is ROOTHUB.Dev
+    Driver description is USB Root Hub
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\ROOT_HUB20\4&3583CF18&0
+    Name: USB Root Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\ROOT_HUB20&VID8086&PID24DD&REV0002
+        USB\ROOT_HUB20&VID8086&PID24DD
+        USB\ROOT_HUB20
+Driver node #0:
+    Inf file is c:\windows\inf\usbport.inf
+    Inf section is ROOTHUB.Dev
+    Driver description is USB Root Hub
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.5512
+    Driver node rank is 2
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0000&PID_0000\6&1109660A&0&6
+    Name: Unknown Device
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USB\UNKNOWN
+    Compatible IDs:
+        USB\UNKNOWN
+Driver node #0:
+    Inf file is c:\windows\inf\usb.inf
+    Inf section is BADDEVICE.Dev
+    Driver description is Unknown Device
+    Manufacturer name is (Standard USB Host Controller)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 0
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_03F4&PID_2007\000
+    Name: USB Printing Support
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        usbprint
+    Hardware IDs:
+        USB\Vid_03f4&Pid_2007&Rev_0100
+        USB\Vid_03f4&Pid_2007
+    Compatible IDs:
+        USB\Class_07&SubClass_01&Prot_02
+        USB\Class_07&SubClass_01
+        USB\Class_07
+Driver node #0:
+    Inf file is c:\windows\inf\usbprint.inf
+    Inf section is USBPRINT_Inst
+    Driver description is USB Printing Support
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0403&PID_FB98\00000085
+    Name: USB Coin Dispenser Full Speed Serial Converter
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        FTDIBUS
+    Hardware IDs:
+        USB\Vid_0403&Pid_fb98&Rev_0400
+        USB\Vid_0403&Pid_fb98
+    Compatible IDs:
+        USB\Class_ff&SubClass_ff&Prot_ff
+        USB\Class_ff&SubClass_ff
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem27.inf
+    Inf section is FtdiBus.NT
+    Driver description is USB Coin Dispenser Full Speed Serial Converter
+    Manufacturer name is FTDI
+    Provider name is FTDI
+    Driver date is 3/18/2011
+    Driver version is 2.8.14.0
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0451&PID_2077\5&4A26971&0&2
+    Name: Generic USB Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\Vid_0451&Pid_2077&Rev_0100
+        USB\Vid_0451&Pid_2077
+    Compatible IDs:
+        USB\Class_09&SubClass_00&Prot_00
+        USB\Class_09&SubClass_00
+        USB\Class_09
+Driver node #0:
+    Inf file is c:\windows\inf\usb.inf
+    Inf section is StandardHub.Dev
+    Driver description is Generic USB Hub
+    Manufacturer name is (Generic USB Hub)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_04B8&PID_0202\20071218132504
+    Name: EPSON USB Controller for TM/BA/EU Printers
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        TMUSB
+    Hardware IDs:
+        USB\Vid_04b8&Pid_0202&Rev_0101
+        USB\Vid_04b8&Pid_0202
+    Compatible IDs:
+        USB\Class_ff&SubClass_ff&Prot_02
+        USB\Class_ff&SubClass_ff
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem36.inf
+    Inf section is TMUSB_Inst.NT
+    Driver description is EPSON USB Controller for TM/BA/EU Printers
+    Manufacturer name is EPSON
+    Provider name is EPSON
+    Driver date is 11/25/2009
+    Driver version is 5.1.0.0
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_04B8&PID_0202\999
+    Name: EPSON USB Controller for TM/BA/EU Printers
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        TMUSB
+    Hardware IDs:
+        USB\Vid_04b8&Pid_0202&Rev_0101
+        USB\Vid_04b8&Pid_0202
+    Compatible IDs:
+        USB\Class_ff&SubClass_ff&Prot_02
+        USB\Class_ff&SubClass_ff
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem36.inf
+    Inf section is TMUSB_Inst.NT
+    Driver description is EPSON USB Controller for TM/BA/EU Printers
+    Manufacturer name is EPSON
+    Provider name is EPSON
+    Driver date is 11/25/2009
+    Driver version is 5.1.0.0
+    Driver node rank is 1
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0529&PID_0620\6&171B9AA4&0&2
+    Name: Token JC
+    Device is not set up.
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USB\Vid_0529&Pid_0620&Rev_0100
+        USB\Vid_0529&Pid_0620
+    Compatible IDs:
+        USB\Class_0b&SubClass_00&Prot_00
+        USB\Class_0b&SubClass_00
+        USB\Class_0b
+    No driver nodes found for this device.
+USB\VID_0529&PID_0620\6&1935A036&0&2
+    Name: Token JC
+    Device is not set up.
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USB\Vid_0529&Pid_0620&Rev_0100
+        USB\Vid_0529&Pid_0620
+    Compatible IDs:
+        USB\Class_0b&SubClass_00&Prot_00
+        USB\Class_0b&SubClass_00
+        USB\Class_0b
+    No driver nodes found for this device.
+USB\VID_0529&PID_3000\07000789113C00B8
+    Name: USB Mass Storage Device
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        USBSTOR
+    Hardware IDs:
+        USB\Vid_0529&Pid_3000&Rev_0110
+        USB\Vid_0529&Pid_3000
+    Compatible IDs:
+        USB\Class_08&SubClass_06&Prot_50
+        USB\Class_08&SubClass_06
+        USB\Class_08
+Driver node #0:
+    Inf file is c:\windows\inf\usbstor.inf
+    Inf section is USBSTOR_BULK
+    Driver description is USB Mass Storage Device
+    Manufacturer name is Compatible USB storage device
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8192
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0529&PID_3000\0700079A1F013C48AE76
+    Name: USB Mass Storage Device
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        USBSTOR
+    Hardware IDs:
+        USB\Vid_0529&Pid_3000&Rev_0110
+        USB\Vid_0529&Pid_3000
+    Compatible IDs:
+        USB\Class_08&SubClass_06&Prot_50
+        USB\Class_08&SubClass_06
+        USB\Class_08
+Driver node #0:
+    Inf file is c:\windows\inf\usbstor.inf
+    Inf section is USBSTOR_BULK
+    Driver description is USB Mass Storage Device
+    Manufacturer name is Compatible USB storage device
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8192
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_05E3&PID_0608\5&111DB94E&0&5
+    Name: Generic USB Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\Vid_05e3&Pid_0608&Rev_0901
+        USB\Vid_05e3&Pid_0608
+    Compatible IDs:
+        USB\Class_09&SubClass_00&Prot_00
+        USB\Class_09&SubClass_00
+        USB\Class_09
+Driver node #0:
+    Inf file is c:\windows\inf\usb.inf
+    Inf section is StandardHub.Dev
+    Driver description is Generic USB Hub
+    Manufacturer name is (Generic USB Hub)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_08A6&PID_C002\SUNLIGHT
+    Name: USB Printing Support
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        usbprint
+    Hardware IDs:
+        USB\Vid_08a6&Pid_c002&Rev_0135
+        USB\Vid_08a6&Pid_c002
+    Compatible IDs:
+        USB\Class_07&SubClass_01&Prot_02
+        USB\Class_07&SubClass_01
+        USB\Class_07
+Driver node #0:
+    Inf file is c:\windows\inf\usbprint.inf
+    Inf section is USBPRINT_Inst
+    Driver description is USB Printing Support
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_08A6&PID_C01D\SNOWHAVEN
+    Name: USB Printing Support
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        usbprint
+    Hardware IDs:
+        USB\Vid_08a6&Pid_c01d&Rev_3303
+        USB\Vid_08a6&Pid_c01d
+    Compatible IDs:
+        USB\Class_07&SubClass_01&Prot_02
+        USB\Class_07&SubClass_01
+        USB\Class_07
+Driver node #0:
+    Inf file is c:\windows\inf\usbprint.inf
+    Inf section is USBPRINT_Inst
+    Driver description is USB Printing Support
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0951&PID_1603\89900000000000006CB02A8F
+    Name: USB Mass Storage Device
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        USBSTOR
+    Hardware IDs:
+        USB\Vid_0951&Pid_1603&Rev_0200
+        USB\Vid_0951&Pid_1603
+    Compatible IDs:
+        USB\Class_08&SubClass_06&Prot_50
+        USB\Class_08&SubClass_06
+        USB\Class_08
+Driver node #0:
+    Inf file is c:\windows\inf\usbstor.inf
+    Inf section is USBSTOR_BULK
+    Driver description is USB Mass Storage Device
+    Manufacturer name is Compatible USB storage device
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8192
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_0BED&PID_1100\17993202558
+    Name: MEI Inc. Cashflow-SC Bill Acceptor (EBDS over USB) (COM5)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Device is not present.
+    Controlling service:
+        silabser
+    Hardware IDs:
+        USB\Vid_0bed&Pid_1100&Rev_0100
+        USB\Vid_0bed&Pid_1100
+    Compatible IDs:
+        USB\Class_ff&SubClass_00&Prot_00
+        USB\Class_ff&SubClass_00
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem37.inf
+    Inf section is silabser.Dev
+    Driver description is MEI Inc. Cashflow-SC Bill Acceptor (EBDS over USB)
+    Manufacturer name is MEI Inc.
+    Provider name is MEI Inc.
+    Driver date is 7/21/2010
+    Driver version is 6.1.0.0
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+USB\VID_0BED&PID_1100\17993202560
+    Name: MEI Inc. Cashflow-SC Bill Acceptor (EBDS over USB) (COM6)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Device is not present.
+    Controlling service:
+        silabser
+    Hardware IDs:
+        USB\Vid_0bed&Pid_1100&Rev_0100
+        USB\Vid_0bed&Pid_1100
+    Compatible IDs:
+        USB\Class_ff&SubClass_00&Prot_00
+        USB\Class_ff&SubClass_00
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem37.inf
+    Inf section is silabser.Dev
+    Driver description is MEI Inc. Cashflow-SC Bill Acceptor (EBDS over USB)
+    Manufacturer name is MEI Inc.
+    Provider name is MEI Inc.
+    Driver date is 7/21/2010
+    Driver version is 6.1.0.0
+    Driver node rank is 1
+    Driver node flags are 00002240
+        Inf is digitally signed
+USB\VID_1046&PID_0800\6&1109660A&0&4
+    Name: USB-Serial Controller
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USB\Vid_1046&Pid_0800&Rev_0001
+        USB\Vid_1046&Pid_0800
+    Compatible IDs:
+        USB\Class_ff&SubClass_00&Prot_00
+        USB\Class_ff&SubClass_00
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem34.inf
+    Inf section is ComPort
+    Driver description is Hitachi AE USB-to-Serial Comm Port
+    Manufacturer name is Hitachi Asahi Electronics
+    Provider name is Hitachi Asahi Electronics
+    Driver date is 4/9/2002
+    Driver version is 1.5.0.0
+    Driver node rank is 32769
+    Driver node flags are 00000244
+USB\VID_1046&PID_0800\6&1109660A&0&5
+    Name: Hitachi AE USB-to-Serial Comm Port (COM3)
+    Setup Class: {4D36E978-E325-11CE-BFC1-08002BE10318} Ports
+    Device is not present.
+    Upper filters:
+        serenum
+    Controlling service:
+        Ser2pl
+    Hardware IDs:
+        USB\Vid_1046&Pid_0800&Rev_0001
+        USB\Vid_1046&Pid_0800
+    Compatible IDs:
+        USB\Class_ff&SubClass_00&Prot_00
+        USB\Class_ff&SubClass_00
+        USB\Class_ff
+Driver node #0:
+    Inf file is c:\windows\inf\oem34.inf
+    Inf section is ComPort
+    Driver description is Hitachi AE USB-to-Serial Comm Port
+    Manufacturer name is Hitachi Asahi Electronics
+    Provider name is Hitachi Asahi Electronics
+    Driver date is 4/9/2002
+    Driver version is 1.5.0.0
+    Driver node rank is 32769
+    Driver node flags are 00000244
+USB\VID_1051&PID_F001\CS000107
+    Name: USB Printing Support
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        usbprint
+    Hardware IDs:
+        USB\Vid_1051&Pid_f001&Rev_0100
+        USB\Vid_1051&Pid_f001
+    Compatible IDs:
+        USB\Class_07&SubClass_01&Prot_02
+        USB\Class_07&SubClass_01
+        USB\Class_07
+Driver node #0:
+    Inf file is c:\windows\inf\usbprint.inf
+    Inf section is USBPRINT_Inst
+    Driver description is USB Printing Support
+    Manufacturer name is Microsoft
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USB\VID_13FE&PID_1DA0\5&111DB94E&0&5
+    Name: Generic USB Hub
+    Setup Class: {36FC9E60-C465-11CF-8056-444553540000} USB
+    Device is not present.
+    Controlling service:
+        usbhub
+    Hardware IDs:
+        USB\Vid_13fe&Pid_1da0&Rev_0702
+        USB\Vid_13fe&Pid_1da0
+    Compatible IDs:
+        USB\Class_09&SubClass_00&Prot_00
+        USB\Class_09&SubClass_00
+        USB\Class_09
+Driver node #0:
+    Inf file is c:\windows\inf\usb.inf
+    Inf section is StandardHub.Dev
+    Driver description is Generic USB Hub
+    Manufacturer name is (Generic USB Hub)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2600.0
+    Driver node rank is 8194
+    Driver node flags are 00002244
+        Inf is digitally signed
+USBPRINT\DIEBOLD_PROCOMP_IT533T\7&2BDCC32D&0&USB002
+    Name: Diebold Procomp IT533T_A
+    Setup Class: {4D36E979-E325-11CE-BFC1-08002BE10318} Printer
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USBPRINT\Diebold_Procomp_IT53C907
+        Diebold_Procomp_IT53C907
+Driver node #0:
+    Inf file is c:\windows\inf\oem33.inf
+    Inf section is ME_DRV_T530A.GPD
+    Driver description is Diebold Procomp IT533T_A
+    Manufacturer name is DieboldProcomp
+    Provider name is Mecaf
+    Driver date is 12/28/2010
+    Driver version is 2.0.3.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBPRINT\STARMICRONICSNP-255-C_JOURNAL\7&5B003AC&0&USB001
+    Name: Star Journal Printer
+    Setup Class: {4D36E979-E325-11CE-BFC1-08002BE10318} Printer
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USBPRINT\StarMicronicsNP-255-24AA
+        StarMicronicsNP-255-24AA
+Driver node #0:
+    Inf file is c:\windows\inf\oem32.inf
+    Inf section is JOURNALPRT
+    Driver description is Star Journal Printer
+    Manufacturer name is Star
+    Provider name is STAR Micronics
+    Driver date is 4/28/2011
+    Driver version is 3.1.1.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBPRINT\TECSUNLIGHT\7&480A390&0&USB004
+    Name: Sunlight
+    Setup Class: {4D36E979-E325-11CE-BFC1-08002BE10318} Printer
+    Device is not present.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USBPRINT\TECSUNLIGHT7CEC
+        TECSUNLIGHT7CEC
+Driver node #0:
+    Inf file is c:\windows\inf\oem35.inf
+    Inf section is SUNLIGHT
+    Driver description is Sunlight
+    Manufacturer name is TEC
+    Provider name is TEC
+    Driver date is 12/8/2011
+    Driver version is 1.8.3.0
+    Driver node rank is 0
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBPRINT\TOSHIBATEC_SNOWHAVEN\7&1EC8DF77&0&USB003
+    Name: Snowhaven
+    Setup Class: {4D36E979-E325-11CE-BFC1-08002BE10318} Printer
+    Driver is running.
+    Device is not using any resources.
+    Controlling service:
+        (none)
+    Hardware IDs:
+        USBPRINT\TOSHIBATEC_Snowhaven1A03
+        TOSHIBATEC_Snowhaven1A03
+Driver node #0:
+    Inf file is c:\windows\inf\oem31.inf
+    Inf section is SNHV.XPD
+    Driver description is Snowhaven
+    Manufacturer name is TSE
+    Provider name is TSE
+    Driver date is 8/17/2012
+    Driver version is 2.0.0.0
+    Driver node rank is 4096
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBSTOR\CDROM&VEN_ALADDIN&PROD_NG-FLASH_5.01&REV_PMAP\07000789113C00B8&1
+    Name: Aladdin NG-Flash 5.01 USB Device
+    Setup Class: {4D36E965-E325-11CE-BFC1-08002BE10318} CDROM
+    Device is not present.
+    Controlling service:
+        cdrom
+    Hardware IDs:
+        USBSTOR\CdRomAladdin_NG-Flash_5.01___PMAP
+        USBSTOR\CdRomAladdin_NG-Flash_5.01___
+        USBSTOR\CdRomAladdin_
+        USBSTOR\Aladdin_NG-Flash_5.01___P
+        Aladdin_NG-Flash_5.01___P
+        USBSTOR\GenCdRom
+        GenCdRom
+    Compatible IDs:
+        USBSTOR\CdRom
+        USBSTOR\RAW
+Driver node #0:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdrom_install
+    Driver description is CD-ROM Drive
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 6
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdda_accurate_install
+    Driver description is CD-ROM Drive (force CDDA accurate)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdda_inaccurate_install
+    Driver description is CD-ROM Drive (force CDDA inaccurate)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #3:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_disable_install
+    Driver description is CD-ROM Drive (force IMAPI disable)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #4:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer1_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,1)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #5:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer2_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,2)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #6:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer3_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,3)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #7:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer4_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,4)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #8:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer5_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,5)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #9:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,0)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #10:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer1_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,1)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #11:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer2_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,2)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #12:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer3_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,3)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #13:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer4_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,4)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #14:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer5_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,5)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBSTOR\CDROM&VEN_ALADDIN&PROD_NG-FLASH_5.01&REV_PMAP\0700079A1F013C48AE76&1
+    Name: Aladdin NG-Flash 5.01 USB Device
+    Setup Class: {4D36E965-E325-11CE-BFC1-08002BE10318} CDROM
+    Device is not present.
+    Controlling service:
+        cdrom
+    Hardware IDs:
+        USBSTOR\CdRomAladdin_NG-Flash_5.01___PMAP
+        USBSTOR\CdRomAladdin_NG-Flash_5.01___
+        USBSTOR\CdRomAladdin_
+        USBSTOR\Aladdin_NG-Flash_5.01___P
+        Aladdin_NG-Flash_5.01___P
+        USBSTOR\GenCdRom
+        GenCdRom
+    Compatible IDs:
+        USBSTOR\CdRom
+        USBSTOR\RAW
+Driver node #0:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdrom_install
+    Driver description is CD-ROM Drive
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 6
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #1:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdda_accurate_install
+    Driver description is CD-ROM Drive (force CDDA accurate)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #2:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is cdda_inaccurate_install
+    Driver description is CD-ROM Drive (force CDDA inaccurate)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #3:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_disable_install
+    Driver description is CD-ROM Drive (force IMAPI disable)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #4:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer1_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,1)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #5:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer2_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,2)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #6:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer3_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,3)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #7:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer4_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,4)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #8:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_buffer5_install
+    Driver description is CD-ROM Drive (IMAPI settings 0,5)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #9:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,0)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #10:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer1_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,1)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #11:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer2_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,2)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #12:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer3_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,3)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #13:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer4_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,4)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+Driver node #14:
+    Inf file is c:\windows\inf\cdrom.inf
+    Inf section is imapi_noopc_buffer5_install
+    Driver description is CD-ROM Drive (IMAPI settings 1,5)
+    Manufacturer name is (Standard CD-ROM drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 4102
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBSTOR\DISK&VEN_ALADDIN&PROD_NG-FLASH_5.01&REV_PMAP\07000789113C00B8&0
+    Name: Aladdin NG-Flash 5.01 USB Device
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Device is not present.
+    Upper class filters:
+        PartMgr
+    Controlling service:
+        disk
+    Hardware IDs:
+        USBSTOR\DiskAladdin_NG-Flash_5.01___PMAP
+        USBSTOR\DiskAladdin_NG-Flash_5.01___
+        USBSTOR\DiskAladdin_
+        USBSTOR\Aladdin_NG-Flash_5.01___P
+        Aladdin_NG-Flash_5.01___P
+        USBSTOR\GenDisk
+        GenDisk
+    Compatible IDs:
+        USBSTOR\Disk
+        USBSTOR\RAW
+Driver node #0:
+    Inf file is c:\windows\inf\disk.inf
+    Inf section is disk_install
+    Driver description is Disk drive
+    Manufacturer name is (Standard disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 6
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBSTOR\DISK&VEN_ALADDIN&PROD_NG-FLASH_5.01&REV_PMAP\0700079A1F013C48AE76&0
+    Name: Aladdin NG-Flash 5.01 USB Device
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Device is not present.
+    Upper class filters:
+        PartMgr
+    Controlling service:
+        disk
+    Hardware IDs:
+        USBSTOR\DiskAladdin_NG-Flash_5.01___PMAP
+        USBSTOR\DiskAladdin_NG-Flash_5.01___
+        USBSTOR\DiskAladdin_
+        USBSTOR\Aladdin_NG-Flash_5.01___P
+        Aladdin_NG-Flash_5.01___P
+        USBSTOR\GenDisk
+        GenDisk
+    Compatible IDs:
+        USBSTOR\Disk
+        USBSTOR\RAW
+Driver node #0:
+    Inf file is c:\windows\inf\disk.inf
+    Inf section is disk_install
+    Driver description is Disk drive
+    Manufacturer name is (Standard disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 6
+    Driver node flags are 00002240
+        Inf is digitally signed
+USBSTOR\DISK&VEN_KINGSTON&PROD_DATATRAVELER_2.0&REV_1.00\89900000000000006CB02A8F&0
+    Name: Kingston DataTraveler 2.0 USB Device
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Device is not present.
+    Upper class filters:
+        PartMgr
+    Controlling service:
+        disk
+    Hardware IDs:
+        USBSTOR\DiskKingstonDataTraveler_2.01.00
+        USBSTOR\DiskKingstonDataTraveler_2.0
+        USBSTOR\DiskKingston
+        USBSTOR\KingstonDataTraveler_2.01
+        KingstonDataTraveler_2.01
+        USBSTOR\GenDisk
+        GenDisk
+    Compatible IDs:
+        USBSTOR\Disk
+        USBSTOR\RAW
+Driver node #0:
+    Inf file is c:\windows\inf\disk.inf
+    Inf section is disk_install
+    Driver description is Disk drive
+    Manufacturer name is (Standard disk drives)
+    Provider name is Microsoft
+    Driver date is 7/1/2001
+    Driver version is 5.1.2535.0
+    Driver node rank is 6
+    Driver node flags are 00002240
+        Inf is digitally signed
+241 matching device(s) found.

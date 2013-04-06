@@ -1,0 +1,28 @@
+TARGETNAME=dgidebug
+
+TARGETPATH=obj
+
+TARGETTYPE=PROGRAM
+
+SOURCES= \
+    dgidebug.cpp \
+    dgidebug.rc
+
+TARGETLIBS= \
+	$(SDK_LIB_PATH)\psapi.lib \
+    C:\WinDDK\7600.16385.1\Debuggers\sdk\lib\i386\dbghelp.lib
+#    $(SDK_LIB_PATH)\dbghelp.lib
+
+INCLUDES=C:\WinDDK\7600.16385.1\Debuggers\sdk\inc;..\dgiutil
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+USE_LIBCMT=1
+
+UMTYPE=console
+
+UMENTRY=wmain
+
+USE_NATIVE_EH=1
+
+USE_STL=1

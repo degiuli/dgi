@@ -1,0 +1,17 @@
+TARGETNAME=dgitracer
+
+TARGETTYPE=LIBRARY
+
+SOURCES=dgitracer.cpp dgitracer.rc
+
+#TARGETLIBS=
+
+INCLUDES=..\dgiutil
+
+#C_DEFINES=/DUNICODE /D_UNICODE
+
+USE_LIBCMT=1
+
+USE_NATIVE_EH=1
+
+USE_STL=1
