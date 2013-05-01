@@ -29,7 +29,7 @@ namespace dgi
     class DGITracer
     {
     private:
-        std::basic_ofstream<char> m_tracefile;
+        std::ofstream m_tracefile;
         std::string m_tracefilename;
         unsigned int m_filelimit;
         unsigned int m_threadhandle;
