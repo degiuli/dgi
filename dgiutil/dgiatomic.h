@@ -22,7 +22,7 @@ namespace dgi
     {
     private:
         DGISpinLock m_syncher;
-        T m_value;
+        volatile T m_value;
 
     public:
         //defaul contructors
