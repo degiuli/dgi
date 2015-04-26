@@ -1,12 +1,26 @@
-/*++
-Copyright (c) De  Giuli Informatica Ltda.
+/*--
+The MIT License (MIT)
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
+
 #include <windows.h>
 #include <shlwapi.h>
 #include <dbghelp.h>
@@ -21,7 +35,7 @@ Copyright (c) De  Giuli Informatica Ltda.
 #include "dgiminidump.h"
 
 std::string g_basename;
-dgi::DGITracer* g_ptracer = NULL;
+dgi::DGITracer* g_ptracer = nullptr;
 LPTOP_LEVEL_EXCEPTION_FILTER g_pPreviousExceptionFilter;
 
 void MiniDumpInit(dgi::DGITracer& tracer,std::string basename)
@@ -40,24 +54,24 @@ void MiniDumpInit(dgi::DGITracer& tracer,std::string basename)
 void MiniDumpEnd()
 {
     SetUnhandledExceptionFilter((LPTOP_LEVEL_EXCEPTION_FILTER)g_pPreviousExceptionFilter);
-    g_ptracer = NULL;
+    g_ptracer = nullptr;
 }
     
 LPTOP_LEVEL_EXCEPTION_FILTER WINAPI ReportAttemptsToSetUnhandledExceptionFilter(LPTOP_LEVEL_EXCEPTION_FILTER lpTopLevelExceptionFilter)
 {
     if(g_ptracer)
        g_ptracer->SendTrace(__LINE__,"-- Prevented attempt to set unhandled exception filter. lpTopLevelExceptionFilter: 0x%p", lpTopLevelExceptionFilter);
-    return NULL;
+    return nullptr;
 }
 
 BOOL RedirectSetUnhandledExceptionFilter()
 {
     HMODULE hKernel32 = LoadLibrary("kernel32.dll");
-    if (hKernel32 == NULL) 
+    if (hKernel32 == nullptr) 
         return FALSE;
 
     void *pOriginalFunc = GetProcAddress(hKernel32, "SetUnhandledExceptionFilter");
-    if (pOriginalFunc == NULL) 
+    if (pOriginalFunc == nullptr) 
         return FALSE;
 
     DWORD dwOriginalAddr = (DWORD) pOriginalFunc;
@@ -78,18 +92,18 @@ BOOL RedirectSetUnhandledExceptionFilter()
     
 void CreateMiniDump( LPEXCEPTION_POINTERS pExceptionInfo )
 {
-    time_t dumptime = time(NULL);
+    time_t dumptime = time(nullptr);
     std::string filename = g_basename + ctime((const time_t*)dumptime) + ".dmp";
 
     // Create the file first.
-    HANDLE hFile = CreateFile(filename.c_str(),GENERIC_READ|GENERIC_WRITE,0,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
+    HANDLE hFile = CreateFile(filename.c_str(),GENERIC_READ|GENERIC_WRITE,0,nullptr,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
 
     if ( hFile != INVALID_HANDLE_VALUE )
     {
         MINIDUMP_EXCEPTION_INFORMATION stMDEI = {0};
-        MINIDUMP_EXCEPTION_INFORMATION * pMDEI = NULL;
+        MINIDUMP_EXCEPTION_INFORMATION * pMDEI = nullptr;
 
-        if ( pExceptionInfo != NULL )
+        if ( pExceptionInfo != nullptr )
         {
             stMDEI.ThreadId = GetCurrentThreadId();
             stMDEI.ExceptionPointers = pExceptionInfo;
@@ -98,7 +112,7 @@ void CreateMiniDump( LPEXCEPTION_POINTERS pExceptionInfo )
         }
 
         // Got the file open.  Write it.
-        BOOL bRet = MiniDumpWriteDump(GetCurrentProcess(),GetCurrentProcessId(),hFile,MiniDumpWithPrivateReadWriteMemory,pMDEI,NULL,NULL);
+        BOOL bRet = MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(), hFile, MiniDumpWithPrivateReadWriteMemory, pMDEI, nullptr, nullptr);
         if ( TRUE == bRet )
         {
             if(g_ptracer)

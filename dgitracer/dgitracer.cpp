@@ -1,14 +1,28 @@
-/*++
-Copyright (c) De  Giuli Informatica Ltda.
+/*--
+The MIT License (MIT)
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
+
 #include "dgitracer.h"
-//#include <chrono>
+#include <chrono>
 
 using namespace dgi;
 
@@ -38,10 +52,32 @@ DGITracer::DGITracer(std::string tracefile,unsigned int filelimit)
     m_last = m_divider = m_first;
 
     //start thread
-    //std::thread...
-    unsigned threadId = 0;
-    m_threadhandle = _beginthreadex(NULL,0,ConsumerThread,this,0,&threadId);
-    Sleep(50);      //wait thread to be created
+    m_thread = std::thread([&]()
+    {
+        OutputDebugString(">> DGITracer::ConsumeThread()\r\n");
+
+        THREADNAME_INFO info;
+	    info.dwType = 0x1000;
+	    info.szName = "DGITracerConsumerThread";
+	    info.dwThreadID = -1;   //caller thread
+	    info.dwFlags = 0;
+
+	    __try
+	    {
+		    RaiseException(MS_VC_EXCEPTION,0,sizeof(info)/sizeof(ULONG_PTR),(ULONG_PTR*)&info);
+	    }
+	    __except (EXCEPTION_CONTINUE_EXECUTION)
+	    {
+	    }
+
+        OutputDebugString("-- DGITracer::ConsumeThread() name set\r\n");
+
+        //run until tracer class is about to be unloaded
+        OutputDebugString("-- DGITracer::ConsumeThread() before consume queue\r\n");
+        ConsumeQueue();
+        OutputDebugString("<< DGITracer::ConsumeThread() after consume queue\r\n");
+    });
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
     OutputDebugString("<< DGITracer::ctr()\r\n");
 }
@@ -92,21 +128,17 @@ DGITracer::~DGITracer()
     OutputDebugString(">> DGITracer::dtr()\r\n");
 
     //stop thread
-    if(m_threadrun.get())
+    if (m_threadrun.load(std::memory_order_acquire))
     {
         OutputDebugString("-- DGITracer::dtr() stopping thread\r\n");
-        m_threadrun.set(false);
-        //std::join(std::thread);
-
+        m_threadrun.store(false, std::memory_order_release);
         OutputDebugString("-- DGITracer::dtr() waiting thread finish\r\n");
-        WaitForSingleObject((HANDLE)m_threadhandle,INFINITE);
-        CloseHandle((HANDLE)m_threadhandle);
-        m_threadhandle = 0;
+        m_thread.join();
     }
 
     //cleanup list
     OutputDebugString("-- DGITracer::dtr() cleaunp queue\r\n");
-    while(m_first!=NULL)
+    while(m_first!=nullptr)
     {
         Msg* temp = m_first;
         m_first = temp->m_next;
@@ -127,7 +159,7 @@ void DGITracer::CheckFileSize()
 {
     OutputDebugString(">> DGITracer::CheckFileSize()\r\n");
 
-    if(m_threadrun.get()==false)
+    if(m_threadrun.load(std::memory_order_acquire)==false)
     {
         OutputDebugString("<< DGITracer::CheckFileSize() no thrd\r\n");
         return;
@@ -175,7 +207,7 @@ void DGITracer::SendTrace(unsigned int id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendTrace()\r\n");
 
-    if(m_threadrun.get()==false)
+    if(m_threadrun.load()==false)
     {
         OutputDebugString("<< DGITracer::SendTrace() no thrd\r\n");
         return;
@@ -208,7 +240,7 @@ void DGITracer::SendInformation(unsigned int id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendInformation()\r\n");
 
-    if(m_threadrun.get()==false)
+    if(m_threadrun.load()==false)
     {
         OutputDebugString("<< DGITracer::SendInformation() no thrd\r\n");
         return;
@@ -241,7 +273,7 @@ void DGITracer::SendWarning(unsigned int id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendWarning()\r\n");
 
-    if(m_threadrun.get()==false)
+    if(m_threadrun.load()==false)
     {
         OutputDebugString("<< DGITracer::SendWarning() no thrd\r\n");
         return;
@@ -274,7 +306,7 @@ void DGITracer::SendError(unsigned int id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendError()\r\n");
 
-    if(m_threadrun.get()==false)
+    if(m_threadrun.load()==false)
     {
         OutputDebugString("<< DGITracer::SendError() no thrd\r\n");
         return;
@@ -307,7 +339,7 @@ void DGITracer::SendFatal(unsigned int id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendFatal()\r\n");
 
-    if(m_threadrun.get()==false)
+    if(m_threadrun.load()==false)
     {
         OutputDebugString("<< DGITracer::SendFatal() no thrd\r\n");
         return;
@@ -336,56 +368,23 @@ void DGITracer::SendFatal(unsigned int id,const char *format,...)
     OutputDebugString("<< DGITracer::SendFatal()\r\n");
 }
 
-unsigned __stdcall DGITracer::ConsumerThread(void*param)
-{
-    OutputDebugString(">> DGITracer::ConsumeThread()\r\n");
-
-    THREADNAME_INFO info;
-	info.dwType = 0x1000;
-	info.szName = "DGITracerConsumerThread";
-	info.dwThreadID = -1;   //caller thread
-	info.dwFlags = 0;
-
-	__try
-	{
-		RaiseException(MS_VC_EXCEPTION,0,sizeof(info)/sizeof(ULONG_PTR),(ULONG_PTR*)&info);
-	}
-	__except (EXCEPTION_CONTINUE_EXECUTION)
-	{
-	}
-
-    OutputDebugString("-- DGITracer::ConsumeThread() name set\r\n");
-
-    DGITracer *ptracer = (DGITracer*)param;
-
-    //run until tracer class is about to be unloaded
-    OutputDebugString("-- DGITracer::ConsumeThread() before consume queue\r\n");
-    ptracer->ConsumeQueue();
-    OutputDebugString("<< DGITracer::ConsumeThread() after consume queue\r\n");
-
-    _endthreadex(0);
-    return 0;
-}
-
 void DGITracer::ConsumeQueue()
 {
     OutputDebugString(">> DGITracer::ConsumeQueue()\r\n");
 
-    m_threadrun.set(true);
-    while(m_threadrun.get())
+    m_threadrun.store(true);
+    while(m_threadrun.load(std::memory_order_acquire))
     {
         //wait some time for next read
-        //std::chrono::milliseconds dura(100);
-        //std::this_thread::sleep_for(dura);
-        Sleep(100);
+        std::this_thread::sleep_for(std::chrono::milliseconds(2));
 
         //consumes queue
-        if(m_divider.get() != m_last.get())
+        if (m_divider.load(std::memory_order_acquire) != m_last.load(std::memory_order_acquire))
         {
             OutputDebugString("-- DGITracer::ConsumeQueue() consuming queue\r\n");
 
             //get message
-            std::string* msg = m_divider.get()->m_next->m_msg;
+            std::string* msg = m_divider.load(std::memory_order_acquire)->m_next->m_msg;
 
             //write on file
             if(m_tracefile.is_open())
@@ -400,7 +399,7 @@ void DGITracer::ConsumeQueue()
             }
 
             //indicates it was processed
-            m_divider.set(m_divider.get()->m_next);
+            m_divider.store(m_divider.load(std::memory_order_acquire)->m_next, std::memory_order_release);
 
             //check file size
             CheckFileSize();
@@ -414,28 +413,24 @@ void DGITracer::AddToQueue(const std::string& msg)
 {
     OutputDebugString(">> DGITracer::AddToQueue()\r\n");
 
-    if(m_threadrun.get()==false)
+    if (m_threadrun.load(std::memory_order_acquire) == false)
     {
         OutputDebugString("<< DGITracer::AddToQueue() no thrd\r\n");
         return;
     }
 
     //acquire exclusive acccess
-    m_spinlock.lock();
+    DGILockGuard locker(m_spinlock);
 
-    m_last.get()->m_next = new struct Msg(new std::string(msg));
-    m_last.set(m_last.get()->m_next);
+    m_last.load(std::memory_order_acquire)->m_next = new struct Msg(new std::string(msg));
+    m_last.store(m_last.load(std::memory_order_acquire)->m_next, std::memory_order_release);
 
     //cleanup processed messages
-    while(m_first!=m_divider.get())
+    while (m_first != m_divider.load(std::memory_order_acquire))
     {
         Msg* temp = m_first;
         m_first = temp->m_next;
         delete temp;
     }
-
-    //release
-    m_spinlock.unlock();
-
     OutputDebugString("<< DGITracer::AddToQueue()\r\n");
 }

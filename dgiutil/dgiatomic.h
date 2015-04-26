@@ -1,19 +1,34 @@
-/*++
-Copyright (c) De  Giuli Informatica Ltda.
+/*--
+The MIT License (MIT)
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
+
 #ifndef _DGI_ATOMIC_
 #define _DGI_ATOMIC_
 
+//Microsoft Specific only
 #include "dgispinlock.h"
 
 //this atomic class has been developed to be used when C++/11 is no available
-//and, as a consequence, the std::mutex and str::atomic is not available either
+//or it is not fully implemented missing the std::atomic.
 
 namespace dgi
 {
@@ -22,8 +37,13 @@ namespace dgi
     {
     private:
         DGISpinLock m_syncher;
-        T m_value;
+        volatile T m_value;
 
+        //non-copyable; non-assignable; non-movable
+        atomic(const atomic& lg);
+        atomic(const atomic&& lg);
+        atomic& operator=(const atomic& lg);
+        atomic&& operator=(const atomic&& lg);
     public:
         //defaul contructors
         atomic()
@@ -41,230 +61,149 @@ namespace dgi
 
         //get method
         //gets the correct value
-        inline T get()
+        T load()
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             T value = m_value;
-
-            m_syncher.unlock();
-
             return value;
         }
 
         //set method
         //sets the new value
-        inline void set(T value)
+        void store(T value)
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             m_value = value;
-
-            m_syncher.unlock();
         }
 
-        //exchange method
-        //this method replaces the m_value with argument and
-        //returns the old value of the atomic 
-        inline bool exchange(T newValue)
+        //fetch_add
+        //add a T value
+        T fetch_add(T value)
         {
-            bool ret;
-
-            m_syncher.lock();
-
-            ret = m_value;
-            m_value = newValue;
-
-            m_syncher.unlock();
-
-            return ret;
+            DGILockGuard locker(m_syncher);
+            m_value += value;
+            return m_value;
         }
 
-        //compare_exchange method
-        //this method compares whether the m_value is the expected value
-        //if so, new value is set and then method returns true
-        //otherwise, false is returned
-        inline bool compare_exchange(T expectedValue, T newValue)
+        //fetch_sub
+        //subtract a T value
+        T fetch_sub(T value)
         {
-            bool ret;
-
-            m_syncher.lock();
-
-            if(m_value==expectedValue)
-            {
-                m_value = newValue;
-                ret = true;
-            }
-            else
-            {
-                ret = false;
-            }
-
-            m_syncher.unlock();
-
-            return ret;
-        }
-
-        //copy constructor
-        atomic(const atomic& a)
-        {
-            m_value = a.get();
-            m_syncher = a.m_syncher;
-        }
-
-        //assign constructor
-        atomic& operator=(const atomic& a)
-        {
-            m_value = a.m_value;
-            m_syncher = a.m_syncher;
-
-            return *this;
+            DGILockGuard locker(m_syncher);
+            m_value -= value;
+            return m_value;
         }
 
         //incremental operator
-        inline void operator++()
+        T operator++()
         {
-            m_syncher.lock();
-
-            m_value++;
-
-            m_syncher.unlock();
+            return fetch_add(1);
+        }
+        T operator++(int)
+        {
+            return fetch_add(1);
         }
 
         //decremental operator
-        inline void operator--()
+        T operator--()
         {
-            m_syncher.lock();
+            return fetch_sub(1);
+        }
+        T operator--(int)
+        {
+            return fetch_sub(1);
+        }
 
-            m_value--;
-
-            m_syncher.unlock();
+        //assign operator
+        T operator=(T value)
+        {
+            DGILockGuard locker(m_syncher);
+            m_value = value;
+            return m_value;
         }
 
         //compare operators
-        inline void operator==(T value)
+        bool operator==(T value)
         {
-            m_syncher.lock();
-
-            bool ret = (m_value==value);
-
-            m_syncher.unlock();
-            return ret;
+            DGILockGuard locker(m_syncher);
+            return (m_value==value);
         }
-        inline void operator!=(T value)
+        bool operator!=(T value)
         {
-            m_syncher.lock();
-
-            bool ret = (m_value!=value);
-
-            m_syncher.unlock();
-            return ret;
+            DGILockGuard locker(m_syncher);
+            return (m_value!=value);
         }
-        inline void operator>(T value)
+        bool operator>(T value)
         {
-            m_syncher.lock();
-
-            bool ret = (m_value>value);
-
-            m_syncher.unlock();
-            return ret;
+            DGILockGuard locker(m_syncher);
+            return (m_value>value);
         }
-        inline void operator<(T value)
+        bool operator<(T value)
         {
-            m_syncher.lock();
-
-            bool ret = (m_value<value);
-
-            m_syncher.unlock();
-            return ret;
+            DGILockGuard locker(m_syncher);
+            return (m_value<value);
         }
-        inline void operator>=(T value)
+        bool operator>=(T value)
         {
-            m_syncher.lock();
-
-            bool ret = (m_value>=value);
-
-            m_syncher.unlock();
-            return ret;
+            DGILockGuard locker(m_syncher);
+            return (m_value>=value);
         }
-        inline void operator<=(T value)
+        bool operator<=(T value)
         {
-            m_syncher.lock();
-
-            bool ret = (m_value<=value);
-
-            m_syncher.unlock();
-            return ret;
+            DGILockGuard locker(m_syncher);
+            return (m_value<=value);
         }
 
         //add operator
-        inline void operator+=(T value)
+        T operator+=(T value)
         {
-            m_syncher.lock();
-
-            m_value += value;
-
-            m_syncher.unlock();
+            return fetch_add(value);
         }
 
         //subtract operator
-        inline void operator-=(T value)
+        T operator-=(T value)
         {
-            m_syncher.lock();
-
-            m_value -= value;
-
-            m_syncher.unlock();
+            return fetch_sub(value);
         }
 
         //multiplier operator
-        inline void operator*=(T value)
+        T operator*=(T value)
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             m_value *= value;
-
-            m_syncher.unlock();
+            return m_value;
         }
 
         //divider operator
-        inline void operator/=(T value)
+        T operator/=(T value)
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             m_value /= value;
-
-            m_syncher.unlock();
+            return m_value;
         }
 
         //bitwise AND operator
-        inline void operator&=(T value)
+        T operator&=(T value)
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             m_value &= value;
-
-            m_syncher.unlock();
+            return m_value;
         }
 
         //bitwise OR operator
-        inline void operator|=(T value)
+        T operator|=(T value)
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             m_value |= value;
-
-            m_syncher.unlock();
+            return m_value;
         }
 
         //bitwise XOR operator
-        inline void operator^=(T value)
+        T operator^=(T value)
         {
-            m_syncher.lock();
-
+            DGILockGuard locker(m_syncher);
             m_value ^= value;
-
-            m_syncher.unlock();
+            return m_value;
         }
     };
 }

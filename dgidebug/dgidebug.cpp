@@ -1,11 +1,24 @@
-/*++
-Copyright (c) De  Giuli Informatica Ltda.
+/*--
+The MIT License (MIT)
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
 
 #include <windows.h>
@@ -17,105 +30,101 @@ Copyright (c) De  Giuli Informatica Ltda.
 #include <eh.h>
 #include <sstream>
 
-#define TRACE(a) wprintf(a); wprintf  (L"Last error = %d\n", GetLastError());
-#define TRACE_ERR(a,err) wprintf(a); wprintf  (L"Last error = %d\n", err);
-
 PROCESS_INFORMATION processInfo = {0};
 
 WCHAR * ReadRemoteString(HANDLE process, LPVOID address, WORD length, WORD unicode)
 {
-    WCHAR * msg = new WCHAR[length];
-    if (!msg) return NULL;
-    memset(msg, 0, sizeof(WCHAR)*(length));
+    wchar_t* msg = new wchar_t[length];
+    if (!msg) return nullptr;
+    memset(msg, 0, sizeof(wchar_t)*(length));
 
     if ( unicode )
     {
-        ReadProcessMemory(process, address ,msg, length*sizeof(WCHAR),NULL);  
+        ReadProcessMemory(process, address, msg, length*sizeof(wchar_t), nullptr);
         return msg;
     } 
     else
     {
-        BYTE * originalMsg = new BYTE[length];
+        char * originalMsg = new char[length];
         if (!originalMsg)
         {
             delete[] msg;
-            return NULL;
+            return nullptr;
         }
         memset(originalMsg, 0, sizeof(BYTE)*(length));
         
-        ReadProcessMemory(process, address ,originalMsg, length,NULL);    
-        for (WORD i = 1; i < length; i++)
-        {
-            msg[i] = originalMsg[i];        
-        }
+        ReadProcessMemory(process, address, originalMsg, length, nullptr);
+
+        //convert to unicode
+        std::mbstate_t state = std::mbstate_t();
+        std::mbsrtowcs(msg,(const char**)&originalMsg,length,&state);
         return msg;
     }
 }
 
 WCHAR ReadCharW(HANDLE process, LPVOID address)
 {
-    WCHAR result = '\0';
-    ReadProcessMemory(process, address ,&result, sizeof(WCHAR),NULL);
+    wchar_t result = '\0';
+    ReadProcessMemory(process, address, &result, sizeof(WCHAR), nullptr);
     return result;
 };
 
-WCHAR ReadCharA(HANDLE process, LPVOID address)
+char ReadCharA(HANDLE process, LPVOID address)
 {
-    WCHAR result = '\0';
-    ReadProcessMemory(process, address ,&result, sizeof(CHAR),NULL);
+    char result = '\0';
+    ReadProcessMemory(process, address, &result, sizeof(char), nullptr);
     return result;
 };
 
 WCHAR * ReadRemoteSZ(HANDLE process, LPVOID address, WORD unicode)
 {
-    if (NULL == address) return NULL;
-    WCHAR * msg = 0 ;
+    if (nullptr == address) return nullptr;
+    wchar_t* msg = nullptr;
     if ( unicode )
     {
-        WCHAR * ptr = (WCHAR*)address;
+        wchar_t* ptr = (wchar_t*)address;
         size_t stringLen = 0;
         while(ReadCharW(process, ptr++)) stringLen++; 
-        msg = new WCHAR[stringLen+1];
-        if (!msg) return NULL;
-        memset(msg, 0, sizeof(WCHAR)*(stringLen+1));
-        ReadProcessMemory(process, address ,msg, (stringLen+1)*sizeof(WCHAR),NULL);  
+        msg = new wchar_t[stringLen+1];
+        if (!msg) return nullptr;
+        memset(msg, 0, sizeof(wchar_t)*(stringLen+1));
+        ReadProcessMemory(process, address, msg, (stringLen+1)*sizeof(wchar_t),nullptr);  
         return msg;
     } 
     else
     {
-        CHAR * ptr = (CHAR*)address;
+        char* ptr = (char*)address;
         size_t stringLen = 0;
         while(ReadCharA(process, ptr++)) stringLen++; 
 
-        BYTE * originalMsg = new BYTE[stringLen+1];
-        if (!originalMsg) return NULL;
+        char* originalMsg = new char[stringLen+1];
+        if (!originalMsg) return nullptr;
         memset(originalMsg, 0, sizeof(BYTE)*(stringLen+1));
         
-        msg = new WCHAR[stringLen]; 
+        msg = new wchar_t[stringLen+1]; 
         if (!msg) 
         {
             delete[] originalMsg;
-            return NULL;
+            return nullptr;
         }
-        memset(msg, 0, sizeof(WCHAR)*(stringLen+1));
+        memset(msg, 0, sizeof(wchar_t)*(stringLen+1));
 
-        ReadProcessMemory(process, address ,originalMsg, stringLen+1,NULL);    
-        for (size_t i = 1; i < stringLen+1; i++)
-        {
-            msg[i] = originalMsg[i];        
-        }
-        delete[] originalMsg;
+        ReadProcessMemory(process, address, originalMsg, stringLen + 1, nullptr);;
+
+        //convert to unicode
+        std::mbstate_t state = std::mbstate_t();
+        std::mbsrtowcs(msg,(const char**)&originalMsg,stringLen,&state);
         return msg;
     }
 }
 
 VOID * ReadRemotePtr(HANDLE process, LPVOID address)
 {
-    if (NULL == address) return NULL;
-    VOID* newPointer = 0 ;
-    if (!ReadProcessMemory(process, address ,&newPointer, sizeof(VOID *),NULL))
+    if (nullptr == address) return nullptr;
+    void* newPointer = nullptr;
+    if (!ReadProcessMemory(process, address ,&newPointer, sizeof(void *),nullptr))
     {
-        newPointer=NULL;
+        newPointer=nullptr;
     };  
     return newPointer;
 }
@@ -177,52 +186,100 @@ char* GetExceptionString(DWORD dwExceptionCode)
 
 std::string SetExceptionDescription(EXCEPTION_RECORD& exceptionRecord)
 {
-	std::stringstream stringBuf;
+    std::stringstream stringBuf;
 
-	stringBuf << GetExceptionString(exceptionRecord.ExceptionCode);
-	stringBuf << " (0x";
-	stringBuf << std::hex << exceptionRecord.ExceptionCode;
-	stringBuf << ") at 0x";
-	stringBuf << std::hex << exceptionRecord.ExceptionAddress;
+    stringBuf << GetExceptionString(exceptionRecord.ExceptionCode);
+    stringBuf << " (0x";
+    stringBuf << std::hex << exceptionRecord.ExceptionCode;
+    stringBuf << ") at 0x";
+    stringBuf << std::hex << exceptionRecord.ExceptionAddress;
 
-	if((exceptionRecord.ExceptionCode == EXCEPTION_ACCESS_VIOLATION) ||
-	   (exceptionRecord.ExceptionCode == EXCEPTION_IN_PAGE_ERROR))
-	{
-		switch (exceptionRecord.ExceptionInformation[0])
-		{
-			case 0:
-				stringBuf << " reading";
-				break;
-			case 1:
-				stringBuf << " writing";
-				break;
-			case 8:
-				stringBuf << " DEP violation";
-				break;
-			default:
-				stringBuf << " unknown operation (" << exceptionRecord.ExceptionInformation[0] << ")";
-				break;
-		}
+    if((exceptionRecord.ExceptionCode == EXCEPTION_ACCESS_VIOLATION) ||
+       (exceptionRecord.ExceptionCode == EXCEPTION_IN_PAGE_ERROR))
+    {
+        switch (exceptionRecord.ExceptionInformation[0])
+        {
+        case 0:
+            stringBuf << " reading";
+            break;
+        case 1:
+            stringBuf << " writing";
+            break;
+        case 8:
+            stringBuf << " DEP violation";
+            break;
+        default:
+            stringBuf << " unknown operation (" << exceptionRecord.ExceptionInformation[0] << ")";
+            break;
+        }
 
-		stringBuf << " location 0x" << std::hex << exceptionRecord.ExceptionInformation[1];
-	}
+        stringBuf << " location 0x" << std::hex << exceptionRecord.ExceptionInformation[1];
+    }
 
-	if (exceptionRecord.ExceptionCode == EXCEPTION_IN_PAGE_ERROR)
-	{
-		stringBuf << " with NTSTATUS code of 0x" << std::hex << exceptionRecord.ExceptionInformation[2];
-	}
+    if (exceptionRecord.ExceptionCode == EXCEPTION_IN_PAGE_ERROR)
+    {
+        stringBuf << " with NTSTATUS code of 0x" << std::hex << exceptionRecord.ExceptionInformation[2];
+    }
 
-	return stringBuf.str();
+    std::string exceptionDescription = stringBuf.str();
+    return exceptionDescription;
 }
 
-DWORD ProcessEvent(DEBUG_EVENT& dbgEvent)
+void CreateMinidump(DEBUG_EVENT& dbgEvent)
 {
     if(IsDebuggerPresent())
     {
         DebugBreak();
     }
 
-    std::cout << "New event generated by PID.TID=" << dbgEvent.dwProcessId << "." << dbgEvent.dwThreadId << std::endl;
+    SYSTEMTIME st = {0};
+    GetLocalTime(&st);
+    std::wstringstream ss;
+    ss << L"PID_" << std::dec << processInfo.dwProcessId;
+    ss << L"_TID_" << std::dec << dbgEvent.dwThreadId;
+    ss << L"_" << std::dec << st.wYear;
+    ss << L"y" << std::dec << st.wMonth;
+    ss << L"m" << std::dec << st.wDay;
+    ss << L"d_" << std::dec << st.wHour;
+    ss << L"h" << std::dec << st.wMinute;
+    ss << L"m" << std::dec << st.wSecond;
+    ss << L"s" << std::dec << st.wMilliseconds;
+    ss << L"ms.dmp";
+    std::wstring dumpfile = ss.str();
+
+    //attempt to create dump file
+    HANDLE hFile = CreateFile(dumpfile.c_str(),GENERIC_READ|GENERIC_WRITE,0,nullptr,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
+    if(hFile!=INVALID_HANDLE_VALUE )
+    {
+        MINIDUMP_EXCEPTION_INFORMATION stMDEI = {0};
+        stMDEI.ThreadId = dbgEvent.dwThreadId;
+        stMDEI.ExceptionPointers = reinterpret_cast<PEXCEPTION_POINTERS>(&dbgEvent.u.Exception.ExceptionRecord);
+        stMDEI.ClientPointers = TRUE;
+        MINIDUMP_EXCEPTION_INFORMATION * pMDEI = &stMDEI;
+
+        //write the dump file
+        BOOL bRet = MiniDumpWriteDump(processInfo.hProcess,processInfo.dwProcessId,hFile,MiniDumpWithPrivateReadWriteMemory,pMDEI,nullptr,nullptr);
+        if ( TRUE == bRet )
+        {
+            std::wcout << L"\tCreated " << dumpfile.c_str() << L" minidump file" << std::endl;
+        }
+        else
+        {
+            std::wcout << L"\tFailed to create " << dumpfile.c_str() << L" minidump file, last error " << GetLastError() << std::endl;
+        }
+
+        //close opened file
+        CloseHandle(hFile);
+    }
+    else
+    {
+        std::wcout << L"\t" << dumpfile.c_str() << L" minidump file not created, last error " << GetLastError() << std::endl;
+    }
+}
+
+DWORD ProcessEvent(DEBUG_EVENT& dbgEvent)
+{
+    std::cout << "-- New event generated by PID.TID=" << dbgEvent.dwProcessId << "." << dbgEvent.dwThreadId << std::endl;
 
     switch (dbgEvent.dwDebugEventCode)
     {
@@ -244,40 +301,7 @@ DWORD ProcessEvent(DEBUG_EVENT& dbgEvent)
                     case 0x4000001e:
                         return DBG_CONTINUE;
                     default:
-                        //create minidump
-                        SYSTEMTIME st;
-                        GetLocalTime(&st);
-                        std::wstringstream ss;
-                        ss << L"PID_" << processInfo.dwProcessId;
-                        ss << L"_" << st.wYear << st.wMonth << st.wDay;
-                        ss << L"_" << st.wHour << st.wMinute << st.wSecond << st.wMilliseconds;
-                        ss << L".dmp";
-                        std::wstring dumpfile = ss.str();
-
-                        //attempt to create dump file
-                        HANDLE hFile = CreateFile(dumpfile.c_str(),GENERIC_READ|GENERIC_WRITE,0,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
-                        if(hFile!=INVALID_HANDLE_VALUE )
-                        {
-                            MINIDUMP_EXCEPTION_INFORMATION stMDEI = {0};
-                            stMDEI.ThreadId = dbgEvent.dwThreadId;
-                            stMDEI.ExceptionPointers = reinterpret_cast<PEXCEPTION_POINTERS>(&dbgEvent.u.Exception.ExceptionRecord);
-                            stMDEI.ClientPointers = TRUE;
-                            MINIDUMP_EXCEPTION_INFORMATION * pMDEI = &stMDEI;
-
-                            //write the dump file
-                            BOOL bRet = MiniDumpWriteDump(processInfo.hProcess,processInfo.dwProcessId,hFile,MiniDumpWithPrivateReadWriteMemory,pMDEI,NULL,NULL);
-                            if ( TRUE == bRet )
-                            {
-                                std::wcout << L"\tCreated MiniDump " << dumpfile << L" file" << std::endl;
-                            }
-                            else
-                            {
-                                std::wcout << L"\tFailed to create MiniDump " << dumpfile << L" file, last Error " << GetLastError() << std::endl;
-                            }
-
-                            //close opened file
-                            CloseHandle(hFile);
-                        }
+                        CreateMinidump(dbgEvent);
                         break;
                 }
             }
@@ -338,9 +362,9 @@ DWORD ProcessEvent(DEBUG_EVENT& dbgEvent)
                 LPVOID imageAddress = ReadRemotePtr(processInfo.hProcess, dbgEvent.u.LoadDll.lpImageName);
                 WCHAR * msg = ReadRemoteSZ(processInfo.hProcess, imageAddress, dbgEvent.u.LoadDll.fUnicode);
 
-                if (NULL == msg)
+                if (nullptr == msg)
                 {
-                    std::wcout << L"ImageName: cannot be read"<< std::endl;
+                    std::wcout << L"ImageName: cannot be read" << std::endl;
                 }
                 else
                 {
@@ -371,13 +395,13 @@ DWORD ProcessEvent(DEBUG_EVENT& dbgEvent)
                 std::cout << "\tOutputDebugEvent ";
                 OUTPUT_DEBUG_STRING_INFO& OutputDebug = dbgEvent.u.DebugString;
                 WCHAR * msg = ReadRemoteString(processInfo.hProcess, OutputDebug.lpDebugStringData, OutputDebug.nDebugStringLength, OutputDebug.fUnicode);
-                if (NULL == msg)
+                if (nullptr == msg)
                 {
-                    std::wcout << L"Cannot read OutputDebug"<< std::endl;
+                    std::wcout << L"Cannot read OutputDebug" << std::endl;
                 }
                 else
                 {
-                    std::wcout << L"OutputDebug:\t"<< msg << std::endl;
+                    std::wcout << L"OutputDebug:\t" << msg << std::endl;
                     delete[] msg;
                 }
                 break;
@@ -397,34 +421,33 @@ DWORD ProcessEvent(DEBUG_EVENT& dbgEvent)
     return DBG_CONTINUE ;
 }
 
-VOID _cdecl wmain( ULONG argc, WCHAR* argv[] )
+void _cdecl wmain(int argc, wchar_t* argv[])
 {
+    std::cout << ">> dgidebug\n" << std::endl;
+
     if (argc < 2)
     {
-        wprintf(L"03sample <target>\n");
+        std::cout << "-- Usage: dgidebug apptarget <apptarget aruments>\n" << std::endl;
+        std::cout << "<< dgidebug\n" << std::endl;
         return;
     }
 
     STARTUPINFO startupInfo={0}; 
     startupInfo.cb = sizeof(startupInfo);
 
-    int commandLength = wcslen(argv[1])+(argv[2]?wcslen(argv[2]):0) + 2;
-    WCHAR * commandLine = new WCHAR[commandLength];
-    if (!commandLine)
+    std::wstring commandLine;
+    for(int i=1;i<argc;i++)
     {
-        TRACE(L"Allocation failed\n");
+        commandLine.append(argv[i]);
+        commandLine.append(L" ");
     }
-    wcscpy_s(commandLine, commandLength, argv[1]);
-    if (argv[2])
-    {
-        wcscat_s(commandLine, commandLength, L" ");
-        wcscat_s(commandLine, commandLength, argv[2]);
-    }
-
-    BOOL res = CreateProcess(NULL, commandLine, NULL, NULL, FALSE, DEBUG_PROCESS, NULL, NULL, &startupInfo, &processInfo);
+    
+    std::cout << "-- Starting " << commandLine.c_str() << "\n" << std::endl;
+    BOOL res = CreateProcess(nullptr, (LPWSTR)commandLine.c_str(), nullptr, nullptr, FALSE, DEBUG_PROCESS, nullptr, nullptr, &startupInfo, &processInfo);
     if (FALSE == res)
     {
-        TRACE(L"CreateProcess failed\n");
+        std::cout << "-- CreateProcess failed, " << GetLastError() << "\n" << std::endl;
+        std::cout << "<< dgidebug\n" << std::endl;
         return;
     }
     DEBUG_EVENT debugEvent = { 0 } ;
@@ -434,16 +457,17 @@ VOID _cdecl wmain( ULONG argc, WCHAR* argv[] )
     {
         if (!WaitForDebugEvent(&debugEvent, INFINITE))
         {
-            TRACE(L"WaitForDebugEvent failed\n");
+            std::cout << "-- WaitForDebugEvent failed, " << GetLastError() << "\n" << std::endl;
             break;
         }
         endDisposition = ProcessEvent(debugEvent);
         if (0 == endDisposition) break;
         if (!ContinueDebugEvent(debugEvent.dwProcessId, debugEvent.dwThreadId, endDisposition))
         {
-            TRACE(L"ContinueDebugEvent failed\n");
+            std::cout << "-- ContinueDebugEvent failed, " << GetLastError() << "\n" << std::endl;
             break;
         };
     }
+    std::cout << "<< dgidebug\n" << std::endl;
 }
 

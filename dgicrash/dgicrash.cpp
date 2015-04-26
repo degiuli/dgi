@@ -1,11 +1,24 @@
-/*++
-Copyright (c) De  Giuli Informatica Ltda.
+/*--
+The MIT License (MIT)
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
 
 #include <iostream>
@@ -46,7 +59,7 @@ int StackOverflow_Aux(int x)
     std::cout << "-- DGICrash: StackOverflow_Aux(" << x << ") -> " << (sizeof(double)*1000000) << std::endl;
 
     double very_large_array[1000000];
-    //do something ...
+    memset(very_large_array,0x00,sizeof(very_large_array));
 
     if(x>0)
         return StackOverflow_Aux(--x);
@@ -220,20 +233,19 @@ void FreeingUnallocatedMemeory(dgi::DGITracer& tracer)
 {
     OutputDebugString(">> DGICrash: FreeingUnallocatedMemeory\r\n");
 
-    /*
     tracer.SendTrace(__LINE__,">> DGICrash: FreeingUnallocatedMemeory");
 
-    char * mem;
+    //char* mem;
 
-    tracer.SendInformation(__LINE__,"-- DGICrash: FreeingUnallocatedMemeory, addr %p",mem);
-    std::cout << "FreeingUnallocatedMemeory: " << std::hex << mem << "\n" << std::endl;
+    //tracer.SendInformation(__LINE__,"-- DGICrash: FreeingUnallocatedMemeory, addr %p",mem);
+    //std::cout << "FreeingUnallocatedMemeory: " << std::hex << mem << "\n" << std::endl;
 
-    delete mem;
+    //delete mem;
 
-    tracer.SendTrace(__LINE__,"<< DGICrash: FreeingUnallocatedMemeory");
-    */
-    tracer.SendWarning(__LINE__,"-- Test has not yet been implemented");
-    std::cout << "Test has not yet been implemented\n" << std::endl;
+    tracer.SendWarning(__LINE__, "Test has not been implemented because newer VS reporst \"error C4700: uninitialized local variable '<var>' used\"");
+    std::cout << "Test has not been implemented because newer VS reporst \"error C4700: uninitialized local variable '<var>' used\"\n" << std::endl;
+
+    tracer.SendTrace(__LINE__, "<< DGICrash: FreeingUnallocatedMemeory");
 
     OutputDebugString("<< DGICrash: FreeingUnallocatedMemeory\r\n");
 }

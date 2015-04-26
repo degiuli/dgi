@@ -4,7 +4,7 @@ TARGETTYPE=LIBRARY
 
 SOURCES=dgiminidump.cpp dgiminidump.rc
 
-TARGETLIBS=..\..\Debuggers\sdk\lib\i386\dbghelp.lib \
+TARGETLIBS=..\..\..\..\Debuggers\sdk\lib\i386\dbghelp.lib \
            ..\dgitracer\i386\dgitracer.lib
 
 INCLUDES=C:\WinDDK\7600.16385.1\Debuggers\sdk\inc;..\dgitracer;..\dgiutil

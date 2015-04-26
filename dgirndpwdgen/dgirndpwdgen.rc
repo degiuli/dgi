@@ -21,18 +21,24 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
 
-#ifndef _DGI_MINIDUMP_
-#define _DGI_MINIDUMP_
-
 #include <windows.h>
-#include <memory>
-#include "dgitracer.h"
+#include <ntverp.h>
 
-void MiniDumpInit(dgi::DGITracer& tracer,std::string basename);
-void MiniDumpEnd();
-LPTOP_LEVEL_EXCEPTION_FILTER WINAPI ReportAttemptsToSetUnhandledExceptionFilter(LPTOP_LEVEL_EXCEPTION_FILTER lpTopLevelExceptionFilter);
-BOOL RedirectSetUnhandledExceptionFilter();
-void CreateMiniDump(LPEXCEPTION_POINTERS pExceptionInfo);
-long WINAPI AppUnhandledExceptionFilter(LPEXCEPTION_POINTERS pExceptionInfo);
+#define    VER_FILETYPE    VFT_DLL
+#define    VER_FILESUBTYPE    VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     "DGI Random Password Generator"
+#define VER_INTERNALNAME_STR SXS_TARGET
 
-#endif  //_DGI_MINIDUMP_
+#undef VER_PRODUCTVERSION
+#define VER_PRODUCTVERSION 1,0,0,0
+
+#undef VER_PRODUCTVERSION_STR
+#define VER_PRODUCTVERSION_STR "1.0.0.0"
+
+#undef VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR "De Giuli Informatica Ltda."
+
+#undef VER_PRODUCTNAME_STR
+#define VER_PRODUCTNAME_STR "DGI Random Password Generator"
+
+#include "..\dgiver.ver"

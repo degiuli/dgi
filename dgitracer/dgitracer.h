@@ -1,12 +1,26 @@
-/*++
-Copyright (c) De  Giuli Informatica Ltda.
+/*--
+The MIT License (MIT)
 
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
+Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
+
 #ifndef _DGI_TRACER_
 #define _DGI_TRACER_
 
@@ -18,8 +32,8 @@ Copyright (c) De  Giuli Informatica Ltda.
 
 #include <process.h>
 #include <windows.h>
-//#include <thread>
-//#include <atomic>
+#include <thread>
+#include <atomic>
 
 #include "dgidefines.h"
 #include "dgiatomic.h"
@@ -29,18 +43,17 @@ namespace dgi
     class DGITracer
     {
     private:
-        std::basic_ofstream<char> m_tracefile;
+        std::ofstream m_tracefile;
         std::string m_tracefilename;
         unsigned int m_filelimit;
-        unsigned int m_threadhandle;
-        /*std*/dgi::atomic<bool> m_threadrun;
+        std::atomic<bool> m_threadrun;
+        std::thread m_thread;
 
         //check whether the file reaches the limit and backup it
         void CheckFileSize();
         short m_checklimit;
 
         //trace queue
-        static unsigned __stdcall ConsumerThread(void*param);
         void ConsumeQueue();
         void AddToQueue(const std::string& msg);
         struct Msg
@@ -50,8 +63,8 @@ namespace dgi
             Msg* m_next;
         };
         struct Msg* m_first;
-        /*std*/dgi::atomic<struct Msg*> m_divider;
-        /*std*/dgi::atomic<struct Msg*> m_last;
+        std::atomic<struct Msg*> m_divider;
+        std::atomic<struct Msg*> m_last;
         DGISpinLock m_spinlock;
 
     public:
