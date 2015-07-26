@@ -36,6 +36,7 @@ WCHAR * ReadRemoteString(HANDLE process, LPVOID address, WORD length, WORD unico
 {
     wchar_t* msg = new wchar_t[length];
     if (!msg) return nullptr;
+
     memset(msg, 0, sizeof(wchar_t)*(length));
 
     if ( unicode )

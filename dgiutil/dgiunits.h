@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿/*--
 The MIT License (MIT)
+=======
+﻿/*++
+Copyright (c) De  Giuli Informatica Ltda.
+>>>>>>> origin/master
 
 Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
@@ -53,16 +58,20 @@ namespace dgi
     const long double exa     = std::pow(10,18);        //E
     const long double zetta   = std::pow(10,21);        //Z
     const long double yotta   = std::pow(10,24);        //Y
+<<<<<<< HEAD
 	
 	//const double pi = M_PI;
 	//const double pi = 3.141592653589793238462643383279502884e+00;
 	//std::cout << std::setprecision(50)<< pi << std::endl;
 	//constexpr double const_pi() { return std::atan(1)*4; }
+=======
+>>>>>>> origin/master
 #endif
 
     /*
     ** SI Units
     */
+<<<<<<< HEAD
 	/*
 	typedef mpl::vector_c<int,1,0,0,0,0,0,0> mass;
 	typedef mpl::vector_c<int,0,1,0,0,0,0,0> length; // or position 
@@ -72,6 +81,9 @@ namespace dgi
 	typedef mpl::vector_c<int,0,0,0,0,0,1,0> intensity;
 	typedef mpl::vector_c<int,0,0,0,0,0,0,1> amount_of_substance;*/
 	template<int M, int K, int S, int Amp=0, int Klv=0, int Mole=0, int CD=0>
+=======
+    template<int M, int K, int S, int Amp=0, int Klv=0, int Mole=0, int CD=0>
+>>>>>>> origin/master
     struct Unit
     {
         enum{ m=M,              //meter - lenght
@@ -310,6 +322,7 @@ namespace dgi
     {
         return Value<RadionuclideActivity>(radionuclideactivity);
     }
+<<<<<<< HEAD
 
 /*
 constexpr float PI = 3.1415926535897932;
@@ -358,6 +371,8 @@ inline Degrees operator"" _deg(long double d) { return Degrees(d); }
 inline Degrees operator"" _deg(unsigned long long d) { return Degrees(d); }
 
 */
+=======
+>>>>>>> origin/master
 }
 
 #endif  //_DGI_UNITS_

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 dgidevcon/buildchk_win7_x86.log
 
@@ -16,3 +17,6 @@ dgidevcon/objchk_win7_x86/i386/dump.obj
 dgitracer/dgitracer.rc
 
 dgiminidump/dgiminidump.rc
+=======
+.DS_Store
+>>>>>>> origin/master
