@@ -1,7 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -24,10 +25,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef _DGI_SPINLOCK_
 #define _DGI_SPINLOCK_
 
-#include <windows.h>
 
 #ifdef _HAS_CPP0X
 #include <thread>
+#include <atomic>
+#else
+#include <windows.h>
 #endif
 
 namespace dgi
@@ -38,48 +41,48 @@ namespace dgi
         DGISpinLock() : m_state(FALSE) {}
         ~DGISpinLock() {}
 
-        //copy constructor
-        DGISpinLock(const DGISpinLock& sl)
-        {
-            m_state = sl.m_state;
-        }
-    
-        //assign contructor
-        DGISpinLock& DGISpinLock::operator=(const DGISpinLock& sl)
-        {
-            m_state = sl.m_state;
-            return *this;
-        }
-    
         //locker method
         void lock()
         {
+#ifndef _HAS_CPP0X
             do
             {
-                while (m_state==TRUE)
+                while (m_state != 0)
                 {
-#ifdef _HAS_CPP0X
-                    std::this_thread::yield();
-#else
                     Sleep(1);
-#endif
                 }
 
-                long prev_state = InterlockedExchange(&m_state,TRUE);
-                if(prev_state==FALSE)
+                long prev_state = InterlockedExchange(&m_state, 1);
+                if (prev_state == 0)
+                {
                     break;
+                }
 
             } while (true);
+#else
+            while(m_state.test_and_set(std::memory_order_acquire))
+            {
+                std::this_thread::yield();
+            }
+#endif
         }
 
         //unlocker method
         void unlock()
         {
+#ifndef _HAS_CPP0X
             InterlockedExchange(&m_state,FALSE);
+#else
+            m_state.clear(std::memory_order_release);
+#endif
         }
 
     private:
+#ifndef _HAS_CPP0X
         volatile long m_state;
+#else
+        std::atomic_flag m_state = ATOMIC_FLAG_INIT;
+#endif
     };
 
     //lock guard class
@@ -97,10 +100,6 @@ namespace dgi
 
     private:
         DGISpinLock m_locker;
-        DGILockGuard(const DGILockGuard& locker);
-        DGILockGuard(const DGILockGuard&& locker);
-        DGILockGuard& DGILockGuard::operator=(const DGILockGuard& locker);
-        DGILockGuard&& DGILockGuard::operator=(const DGILockGuard&& locker);
     };
 }
 

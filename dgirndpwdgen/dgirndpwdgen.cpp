@@ -1,7 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Inform�tica Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -21,31 +22,28 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
 
-#include <windows.h>
 #include <string>
 #include <iostream>
 #include <cctype>
 #include <random>
 #include <chrono>
+#include <vector>
+#include "dgirndpwdgen.h"
 
 size_t get_random(size_t min, size_t max)
 {
-    std::random_device rd;
-    std::mt19937 gen(rd());
+	std::random_device rd;
+	std::seed_seq seedSeq{ rd(), rd(), rd(), rd(), rd(), rd() };
+    std::mt19937 gen{ seedSeq };
     std::uniform_int_distribution<size_t> uid(min, max);
     return uid(gen);
 }
 
-std::string MakePassword(unsigned short size,std::string possibles)
+std::string MakePassword(size_t size, std::string possibles)
 {
-    if(IsDebuggerPresent())
-    {
-        DebugBreak();
-    }
-
     //start password with invalid character
     std::string passwords(size,'\xff');
-    for(unsigned short i=0; i<size; i++)
+    for(size_t i=0; i<size; i++)
     {
         //get position
         auto pos = get_random(0, possibles.size());
@@ -53,13 +51,13 @@ std::string MakePassword(unsigned short size,std::string possibles)
         if(i>0)
         {
             //password should not have character repeated
-            if((passwords[i]==passwords[i-1]) ||
+            if ((passwords[i] == passwords[i - 1]) ||
             //password should not have following characters - e.g. i-1 = 0x31, i = 0x32 or i-1 = 0x31, i = 0x33
-               (passwords[i]==(passwords[i-1]-1)) ||
-               (passwords[i]==(passwords[i-1]-2)) ||
+                (passwords[i] == (passwords[i - 1] - 1)) ||
+                (passwords[i] == (passwords[i - 1] - 2)) ||
             //password should not have following characters - e.g. i-1 = 0x32, i = 0x31 or i-1 = 0x33, i = 0x31
-               (passwords[i]==(passwords[i-1]+1)) ||
-               (passwords[i]==(passwords[i-1]+2)))
+                (passwords[i] == (passwords[i - 1] + 1)) ||
+                (passwords[i] == (passwords[i - 1] + 2)))
             {
                 std::cout << "~";
                 passwords[i] = '\xff';
@@ -79,36 +77,64 @@ std::string MakePassword(unsigned short size,std::string possibles)
     return passwords;
 }
 
-int __cdecl main(void)
+int main(int argc, char* argv[])
 {
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-
-    size_t size{0};
+    size_t size{ 0 };
     std::string type;
     std::string possibles;
     std::string password;
 
-    std::cout << "DGI Random Password Generator" << std::endl;
-    std::cout << "-----------------------------\n" << std::endl;
+    std::cout << "DGI Random Password Generator\n";
+    std::cout << "Version " << dgirndpwdgen_VERSION_MAJOR 
+              << "." << dgirndpwdgen_VERSION_MINOR
+              << "." << dgirndpwdgen_VERSION_PATCH << '\n';
+    std::cout << "-----------------------------\n\n";
 
-    std::cout << "Password Size: ";
-    std::cin >> size;
-    std::cout << std::endl;
-
-    std::cout << "Password Type:\n"
-              << "\tN - Numbers\r\n"
-              << "\tA - Alphabetic\r\n"
-              << "\tX - AlphaNumeric\r\n"
-              << "\tF - Full AlpahNumeric with special characters\r\n"
-              << "\tS - Full AlpahNumeric with special characters (no white space)" << std::endl;
-
-    std::cin >> type;
-    std::cout << std::endl;
-    
-    if(size>0)
+    if(argc == 1)
     {
-        bool run{true};
-        switch(std::toupper(type[0]))
+        std::cout << "Password Size: ";
+        std::cin >> size;
+        std::cout << '\n';
+    
+        std::cout << "Password Type:\n"
+                  << "\tN - Numbers\r\n"
+                  << "\tA - Alphabetic\r\n"
+                  << "\tX - AlphaNumeric\r\n"
+                  << "\tF - Full AlpahNumeric with special characters\r\n"
+                  << "\tS - Full AlpahNumeric with special characters (no white space)\n";
+    
+        std::cin >> type;
+        std::cout << std::endl;
+    }
+    else if(argc != 3)
+    {
+        std::cout << "USAGE: dgirndpwdgen [password size] [password type]\n";
+        std::cout << "Password Type:\n"
+                  << "\tN - Numbers\r\n"
+                  << "\tA - Alphabetic\r\n"
+                  << "\tX - AlphaNumeric\r\n"
+                  << "\tF - Full AlpahNumeric with special characters\r\n"
+                  << "\tS - Full AlpahNumeric with special characters (no white space)\n\n";
+        return 1;
+    }
+    else
+    {
+        std::cout << "Parameters: [" << argv[1];
+        std::cout << "] and [" << argv[2][0] << "]\n";
+        
+        char *end = nullptr;
+        auto size_value = std::strtoul(argv[1], &end, 10);
+        size = static_cast<size_t>(size_value);
+        
+        type = argv[2][0];
+        std::cout << "Running using password size " << size;
+        std::cout << "and password type " << type << '\n';
+    }
+        
+    if (size > 0)
+    {
+        bool run{ true };
+        switch (std::toupper(type[0]))
         {
             case 'N':
                 {
@@ -142,7 +168,7 @@ int __cdecl main(void)
                 break;
             default:
                 {
-                    std::cout << "Invalid Type " << type.c_str() << "\n" << std::endl;
+                    std::cout << "Invalid Type " << type.c_str() << "\n\n";
                     run = false;
                 }
                 break;
@@ -150,28 +176,31 @@ int __cdecl main(void)
         if(run)
         {
             //generate the code based on the paramenters
+            std::chrono::time_point<std::chrono::system_clock> start, end;
             start = std::chrono::system_clock::now();
-            password = MakePassword(size,possibles);
+            
+            password = MakePassword(size, possibles);
+            
             end = std::chrono::system_clock::now();
 
             auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count();
-            std::cout << "Time elapesed " << (float)(elapsed/1000) << "s\n" << std::endl;
+            std::cout << "Time elapesed " << (float)(elapsed/1000) << "s\n\n";
         }
     }
 
     //is there invalid character in the password?
     //if so, error
     auto find_res = password.find('\xff');
-    if(find_res==std::string::npos)
+    if (find_res == std::string::npos)
     {
-        std::cout << "New " << type << " Password " << password << "\n" << std::endl;
+        std::cout << "New " << type << " Password " << password << "\n\n";
     }
     else
     {
-        std::cout << "Unable to create acceptable new " << type << " password\n" << std::endl;
+        std::cout << "Unable to create new acceptable " << type << " password\n\n";
     }
 
-    std::cout << "-----------------------------" << std::endl;
-    std::cout << "DGI Random Password Generator\n" << std::endl;
+    std::cout << "-----------------------------\n";
+    std::cout << "DGI Random Password Generator\n\n";
     return 0;
 }

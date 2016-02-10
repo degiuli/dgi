@@ -1,7 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -29,12 +30,12 @@ using namespace dgi;
 /*
 ** Ascii trace class
 */
-DGITracer::DGITracer(std::string tracefile,unsigned int filelimit)
+DGITracer::DGITracer(std::string tracefile, size_t filelimit)
 {
     OutputDebugString(">> DGITracer::ctr()\r\n");
 
     //check input
-    if(tracefile.size()<=5)
+    if (tracefile.size() <= 5)
     {
         OutputDebugString("<< DGITracer::ctr() inv arg\r\n");
         throw std::invalid_argument("Invalid trace file name");
@@ -82,47 +83,6 @@ DGITracer::DGITracer(std::string tracefile,unsigned int filelimit)
     OutputDebugString("<< DGITracer::ctr()\r\n");
 }
 
-//temporary: the current builder does not support copy constructor nor move constructor
-/*
-DGITracer::DGITracer(const DGITracer &tracer)
-{
-    m_tracefile = tracer.m_tracefile;
-    m_filelimit = tracer.m_filelimit;
-    m_tracefilename = tracer.m_tracefilename;
-    //syncher_ = tracer.syncher_;
-    m_checklimit = 0;
-}
-
-DGITracer& DGITracer::operator=(const DGITracer& tracer)
-{
-    m_tracefile = tracer.m_tracefile;
-    m_filelimit = tracer.m_filelimit;
-    m_tracefilename = tracer.m_tracefilename;
-    //syncher_ = tracer.syncher_;
-    m_checklimit = 0;
-    return *this;
-}
-
-DGITracer::DGITracer(const DGITracer&& tracer)
-{
-    m_tracefile = std::move(tracer.m_tracefile);
-    m_tracefilename = std::more(tracer.m_tracefilename);
-    //syncher_ = std::move(tracer.syncher_);
-    m_filelimit = tracer.m_filelimit;
-    m_checklimit = 0;
-}
-
-DGITracer& DGITracer::operator=(const DGITracer&& tracer)
-{
-    std::move(m_tracefile,tracer.m_tracefile);
-    std::move(m_tracefilename,tracer.m_tracefilename);
-    //std::move(syncher_,tracer.syncher_);
-    m_filelimit = tracer.m_filelimit;
-    m_checklimit = 0;
-    return *this;
-}
-*/
-
 DGITracer::~DGITracer()
 {
     OutputDebugString(">> DGITracer::dtr()\r\n");
@@ -138,7 +98,7 @@ DGITracer::~DGITracer()
 
     //cleanup list
     OutputDebugString("-- DGITracer::dtr() cleaunp queue\r\n");
-    while(m_first!=nullptr)
+    while (m_first != nullptr)
     {
         Msg* temp = m_first;
         m_first = temp->m_next;
@@ -147,7 +107,7 @@ DGITracer::~DGITracer()
 
     //close file if opened
     OutputDebugString("-- DGITracer::dtr() closing file\r\n");
-    if(m_tracefile.is_open())
+    if (m_tracefile.is_open())
     {
         m_tracefile.close();
     }
@@ -159,20 +119,20 @@ void DGITracer::CheckFileSize()
 {
     OutputDebugString(">> DGITracer::CheckFileSize()\r\n");
 
-    if(m_threadrun.load(std::memory_order_acquire)==false)
+    if (m_threadrun.load(std::memory_order_acquire) == false)
     {
         OutputDebugString("<< DGITracer::CheckFileSize() no thrd\r\n");
         return;
     }
 
-    if(!m_tracefile.is_open())
+    if (!m_tracefile.is_open())
     {
         OutputDebugString("<< DGITracer::CheckFileSize() not opn\r\n");
         return;
     }
 
     //the file size check should not be performed on every write, but only after 10 writes
-    if(m_checklimit<10)
+    if (m_checklimit < 10)
     {
         m_checklimit++;
         OutputDebugString("<< DGITracer::CheckFileSize() no chk\r\n");
@@ -189,7 +149,7 @@ void DGITracer::CheckFileSize()
     m_tracefile.seekp(0, std::ios_base::end);
     auto pos = m_tracefile.tellp();
 
-    if(pos>m_filelimit && m_filelimit>0)
+    if (pos > m_filelimit && m_filelimit > 0)
     {
         std::string newfilename = m_tracefilename;
         newfilename += "_bkp";
@@ -203,11 +163,11 @@ void DGITracer::CheckFileSize()
     OutputDebugString("<< DGITracer::CheckFileSize()\r\n");
 }
 
-void DGITracer::SendTrace(unsigned int id,const char *format,...)
+void DGITracer::SendTrace(const uint32_t id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendTrace()\r\n");
 
-    if(m_threadrun.load()==false)
+    if (m_threadrun.load() == false)
     {
         OutputDebugString("<< DGITracer::SendTrace() no thrd\r\n");
         return;
@@ -236,11 +196,11 @@ void DGITracer::SendTrace(unsigned int id,const char *format,...)
     OutputDebugString("<< DGITracer::SendTrace()\r\n");
 }
     
-void DGITracer::SendInformation(unsigned int id,const char *format,...)
+void DGITracer::SendInformation(const uint32_t id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendInformation()\r\n");
 
-    if(m_threadrun.load()==false)
+    if (m_threadrun.load() == false)
     {
         OutputDebugString("<< DGITracer::SendInformation() no thrd\r\n");
         return;
@@ -269,11 +229,11 @@ void DGITracer::SendInformation(unsigned int id,const char *format,...)
     OutputDebugString("<< DGITracer::SendInformation()\r\n");
 }
     
-void DGITracer::SendWarning(unsigned int id,const char *format,...)
+void DGITracer::SendWarning(const uint32_t id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendWarning()\r\n");
 
-    if(m_threadrun.load()==false)
+    if (m_threadrun.load() == false)
     {
         OutputDebugString("<< DGITracer::SendWarning() no thrd\r\n");
         return;
@@ -302,11 +262,11 @@ void DGITracer::SendWarning(unsigned int id,const char *format,...)
     OutputDebugString("<< DGITracer::SendWarning()\r\n");
 }
     
-void DGITracer::SendError(unsigned int id,const char *format,...)
+void DGITracer::SendError(const uint32_t id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendError()\r\n");
 
-    if(m_threadrun.load()==false)
+    if (m_threadrun.load() == false)
     {
         OutputDebugString("<< DGITracer::SendError() no thrd\r\n");
         return;
@@ -335,11 +295,11 @@ void DGITracer::SendError(unsigned int id,const char *format,...)
     OutputDebugString("<< DGITracer::SendError()\r\n");
 }
     
-void DGITracer::SendFatal(unsigned int id,const char *format,...)
+void DGITracer::SendFatal(const uint32_t id,const char *format,...)
 {
     OutputDebugString(">> DGITracer::SendFatal()\r\n");
 
-    if(m_threadrun.load()==false)
+    if (m_threadrun.load() == false)
     {
         OutputDebugString("<< DGITracer::SendFatal() no thrd\r\n");
         return;
@@ -373,7 +333,7 @@ void DGITracer::ConsumeQueue()
     OutputDebugString(">> DGITracer::ConsumeQueue()\r\n");
 
     m_threadrun.store(true);
-    while(m_threadrun.load(std::memory_order_acquire))
+    while (m_threadrun.load(std::memory_order_acquire))
     {
         //wait some time for next read
         std::this_thread::sleep_for(std::chrono::milliseconds(2));
@@ -383,11 +343,14 @@ void DGITracer::ConsumeQueue()
         {
             OutputDebugString("-- DGITracer::ConsumeQueue() consuming queue\r\n");
 
+            //acquire exclusive acccess
+            DGILockGuard locker(m_spinlock);
+
             //get message
             std::string* msg = m_divider.load(std::memory_order_acquire)->m_next->m_msg;
 
             //write on file
-            if(m_tracefile.is_open())
+            if (m_tracefile.is_open())
             {
                 m_tracefile << *msg;
             }

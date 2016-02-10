@@ -1,7 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -45,7 +46,7 @@ namespace dgi
     private:
         std::ofstream m_tracefile;
         std::string m_tracefilename;
-        unsigned int m_filelimit;
+        size_t m_filelimit;
         std::atomic<bool> m_threadrun;
         std::thread m_thread;
 
@@ -69,30 +70,17 @@ namespace dgi
 
     public:
         //default constructor
-        DGITracer(std::string tracefile,unsigned int filelimit=0);
-
-//temporary: the current builder does not support copy constructor nor move constructor
-/*
-        //copy constructor
-        DGITracer(const DGITracer& tracer);
-    
-        //assign contructor
-        DGITracer& DGITracer::operator=(const DGITracer& tracer);
-    
-        //move constructor
-        DGITracer(const DGITracer&& tracer);
-        DGITracer& operator=(const DGITracer&& tracer);
-*/
+        DGITracer(std::string tracefile, size_t filelimit=0);
 
     public:
         //destructor
         ~DGITracer();
     
-        void SendTrace(unsigned int id,const char *format,...);
-        void SendInformation(unsigned int id,const char *format,...);
-        void SendWarning(unsigned int id,const char *format,...);
-        void SendError(unsigned int id,const char *format,...);
-        void SendFatal(unsigned int id,const char *format,...);
+        void SendTrace(const uint32_t id,const char *format,...);
+        void SendInformation(const uint32_t id,const char *format,...);
+        void SendWarning(const uint32_t id,const char *format,...);
+        void SendError(const uint32_t id,const char *format,...);
+        void SendFatal(const uint32_t id,const char *format,...);
     };
 }   //end namespace dgi
 

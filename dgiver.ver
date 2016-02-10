@@ -3,28 +3,28 @@
     constant VER_LEGALCOPYRIGHT_STR_WITH_YEARS below
 *****************************************************************/
 #ifndef VER_LEGALCOPYRIGHT_YEARS
-#define VER_LEGALCOPYRIGHT_YEARS    "2013"
+#define VER_LEGALCOPYRIGHT_YEARS    "2013-2015"
 #endif
 
 #ifndef VER_LEGALCOPYRIGHT_STR_WITH_YEARS
-#define VER_LEGALCOPYRIGHT_STR_WITH_YEARS    "Copyright � 2013 De Giuli Informatica. All rights reserved."
+#define VER_LEGALCOPYRIGHT_STR_WITH_YEARS    "Copyright (c) 2013-2015 De Giuli Informatica / Fábio Lourenção De Giuli. All rights reserved."
 #endif
 
 #ifndef VER_LEGALCOPYRIGHT_STR
 #if defined(RC_INVOKED) && !defined(WIN16)
 #define VER_LEGALCOPYRIGHT_STR L"\251 De Giuli Informatica. All rights reserved."
 #else
-#define VER_LEGALCOPYRIGHT_STR "Copyright (c) De Giuli Informatica. All rights reserved."
+#define VER_LEGALCOPYRIGHT_STR "Copyright (c) De Giuli Informatica / Fábio Lourenção De Giuli. All rights reserved."
 #endif
 #endif
 
 
 #ifndef VER_PRODUCTNAME_STR
-#define VER_PRODUCTNAME_STR "De Giuli Informatica"
+#define VER_PRODUCTNAME_STR "DGI"
 #endif
 
 #ifndef VER_PRODUCTVERSION
-#define VER_PRODUCTVERSION 0,0,0,0
+#define VER_PRODUCTVERSION 1,0,0,0
 #endif
 
 #ifndef VER_FILEVERSION

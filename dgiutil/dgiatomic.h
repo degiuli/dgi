@@ -1,7 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -24,7 +25,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef _DGI_ATOMIC_
 #define _DGI_ATOMIC_
 
-//Microsoft Specific only
 #include "dgispinlock.h"
 
 //this atomic class has been developed to be used when C++/11 is no available
@@ -38,12 +38,6 @@ namespace dgi
     private:
         DGISpinLock m_syncher;
         volatile T m_value;
-
-        //non-copyable; non-assignable; non-movable
-        atomic(const atomic& lg);
-        atomic(const atomic&& lg);
-        atomic& operator=(const atomic& lg);
-        atomic&& operator=(const atomic&& lg);
     public:
         //defaul contructors
         atomic()
