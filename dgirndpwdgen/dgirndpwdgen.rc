@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
-Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2024 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2024 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -23,17 +22,6 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --*/
 
-=======
-/*++
-Copyright (c) Advanced Windows Debugging (ISBN 0321374460) from Addison-Wesley Professional.  All rights reserved.
-
-    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
-    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-    PURPOSE.
-
---*/
->>>>>>> origin/master
 #include <windows.h>
 #include <ntverp.h>
 

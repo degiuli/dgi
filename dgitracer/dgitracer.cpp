@@ -1,8 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
-Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2019 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2019 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -163,7 +163,7 @@ void DGITracer::CheckFileSize()
     OutputDebugString("<< DGITracer::CheckFileSize()\r\n");
 }
 
-void DGITracer::SendTrace(const uint32_t id,const char *format,...)
+void DGITracer::SendTrace(const uint32_t id,char const* format,...)
 {
     OutputDebugString(">> DGITracer::SendTrace()\r\n");
 
@@ -196,7 +196,7 @@ void DGITracer::SendTrace(const uint32_t id,const char *format,...)
     OutputDebugString("<< DGITracer::SendTrace()\r\n");
 }
     
-void DGITracer::SendInformation(const uint32_t id,const char *format,...)
+void DGITracer::SendInformation(const uint32_t id,char const* format,...)
 {
     OutputDebugString(">> DGITracer::SendInformation()\r\n");
 
@@ -229,7 +229,7 @@ void DGITracer::SendInformation(const uint32_t id,const char *format,...)
     OutputDebugString("<< DGITracer::SendInformation()\r\n");
 }
     
-void DGITracer::SendWarning(const uint32_t id,const char *format,...)
+void DGITracer::SendWarning(const uint32_t id,char const* format,...)
 {
     OutputDebugString(">> DGITracer::SendWarning()\r\n");
 
@@ -262,7 +262,7 @@ void DGITracer::SendWarning(const uint32_t id,const char *format,...)
     OutputDebugString("<< DGITracer::SendWarning()\r\n");
 }
     
-void DGITracer::SendError(const uint32_t id,const char *format,...)
+void DGITracer::SendError(const uint32_t id,char const* format,...)
 {
     OutputDebugString(">> DGITracer::SendError()\r\n");
 
@@ -295,7 +295,7 @@ void DGITracer::SendError(const uint32_t id,const char *format,...)
     OutputDebugString("<< DGITracer::SendError()\r\n");
 }
     
-void DGITracer::SendFatal(const uint32_t id,const char *format,...)
+void DGITracer::SendFatal(const uint32_t id,char const* format,...)
 {
     OutputDebugString(">> DGITracer::SendFatal()\r\n");
 

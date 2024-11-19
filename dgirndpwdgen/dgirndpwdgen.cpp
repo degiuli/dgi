@@ -1,8 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
-Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2024 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2024 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -73,7 +73,7 @@ std::string MakePassword(size_t size, std::string possibles)
             std::cout << "*";
         }
     }
-    std::cout << "\n" << std::endl;
+    std::cout << "\n" << '\n';
     return passwords;
 }
 
@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
                   << "\tS - Full AlpahNumeric with special characters (no white space)\n";
     
         std::cin >> type;
-        std::cout << std::endl;
+        std::cout << '\n';
     }
     else if(argc != 3)
     {

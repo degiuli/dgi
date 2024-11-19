@@ -1,8 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
-Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2024 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2024 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -57,7 +57,7 @@ namespace dgi
 	
 	//const double pi = M_PI;
 	//const double pi = 3.141592653589793238462643383279502884e+00;
-	//std::cout << std::setprecision(50)<< pi << std::endl;
+	//std::cout << std::setprecision(50) << pi << '\n';
 	//constexpr double const_pi() { return std::atan(1)*4; }
 #endif
 
@@ -313,7 +313,7 @@ namespace dgi
     }
 
 /*
-constexpr float PI = 3.1415926535897932;
+constexpr float PI = 3.1415926535897932f;
 constexpr float RAD2DEG = 180.0f / PI;
 constexpr float DEG2RAD = PI / 180.0f;
 

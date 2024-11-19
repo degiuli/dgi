@@ -33,32 +33,32 @@ CGlobals g_globals;
 void Usage()
 {
     //       123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-
-    std::cout << "Usage:" << std::endl;
-    std::cout << "\tDGICrash [runonce] [execmode] [nowindow] [instsrv|uninstsrv] " << std::endl;
-    std::cout << "           [sysdetails] [timer:<min>] [logfile:<filename>] \n" << std::endl;
-    std::cout << "           [logpath:<filepath>] [logsize:<mbytes>]\n" << std::endl;
-    std::cout << "Options:" << std::endl;
-    std::cout << "\trunonce:" << std::endl;
-    std::cout << "\t\trun only one time" << std::endl;
-    std::cout << "\texecmode" << std::endl;
-    std::cout << "\t\texecute as normal application" << std::endl;
-    std::cout << "\tnowindow" << std::endl;
-    std::cout << "\t\tdo not show window for execmode" << std::endl;
-    std::cout << "\tinstsrvc" << std::endl;
-    std::cout << "\t\tinstall the service" << std::endl;
-    std::cout << "\tuninstsrv" << std::endl;
-    std::cout << "\t\tuninstall the service" << std::endl;
-    std::cout << "\tsysinfo\t\tcollect as much details as possible" << std::endl;
-    std::cout << "\ttimer:<min>" << std::endl;
-    std::cout << "\t\tlog system status in even <min> minutes" << std::endl;
-    std::cout << "\tlogfile:<filename>" << std::endl;
-    std::cout << "\t\tsave the system status in the <filename>" << std::endl;
-    std::cout << "\tlogpath:<filepath>" << std::endl;
-    std::cout << "\t\tsave the system status log files in the <filepath>\n" << std::endl;
-    std::cout << "\tlogsize:<mbytes>" << std::endl;
-    std::cout << "\t\tsize of each log file storage in megabytes\n" << std::endl;
-    std::cout << "logpath, logfile, logsize, timer and sysdetails without other" << std::endl;
-    std::cout << "options configure the service, which needs to be restarted.\n" << std::endl;
+    std::cout << "Usage:" << '\n';
+    std::cout << "\tDGICrash [runonce] [execmode] [nowindow] [instsrv|uninstsrv] " << '\n';
+    std::cout << "           [sysdetails] [timer:<min>] [logfile:<filename>] \n" << '\n';
+    std::cout << "           [logpath:<filepath>] [logsize:<mbytes>]\n" << '\n';
+    std::cout << "Options:" << '\n';
+    std::cout << "\trunonce:" << '\n';
+    std::cout << "\t\trun only one time" << '\n';
+    std::cout << "\texecmode" << '\n';
+    std::cout << "\t\texecute as normal application" << '\n';
+    std::cout << "\tnowindow" << '\n';
+    std::cout << "\t\tdo not show window for execmode" << '\n';
+    std::cout << "\tinstsrvc" << '\n';
+    std::cout << "\t\tinstall the service" << '\n';
+    std::cout << "\tuninstsrv" << '\n';
+    std::cout << "\t\tuninstall the service" << '\n';
+    std::cout << "\tsysinfo\t\tcollect as much details as possible" << '\n';
+    std::cout << "\ttimer:<min>" << '\n';
+    std::cout << "\t\tlog system status in even <min> minutes" << '\n';
+    std::cout << "\tlogfile:<filename>" << '\n';
+    std::cout << "\t\tsave the system status in the <filename>" << '\n';
+    std::cout << "\tlogpath:<filepath>" << '\n';
+    std::cout << "\t\tsave the system status log files in the <filepath>\n" << '\n';
+    std::cout << "\tlogsize:<mbytes>" << '\n';
+    std::cout << "\t\tsize of each log file storage in megabytes\n" << '\n';
+    std::cout << "logpath, logfile, logsize, timer and sysdetails without other" << '\n';
+    std::cout << "options configure the service, which needs to be restarted.\n" << '\n';
 }
 
 void WriteConfigurationFile()

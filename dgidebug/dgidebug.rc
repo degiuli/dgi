@@ -1,7 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2024 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 1998-2024 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -30,10 +31,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define VER_INTERNALNAME_STR SXS_TARGET
 
 #undef VER_PRODUCTVERSION
-#define VER_PRODUCTVERSION 1,0,0,0
+#define VER_PRODUCTVERSION 1,0,0,1
 
 #undef VER_PRODUCTVERSION_STR
-#define VER_PRODUCTVERSION_STR "1.0.0.0"
+#define VER_PRODUCTVERSION_STR "1.0.0.1"
 
 #undef VER_COMPANYNAME_STR
 #define VER_COMPANYNAME_STR "De Giuli Informatica"

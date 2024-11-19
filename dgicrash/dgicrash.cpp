@@ -1,7 +1,7 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 De Giuli Informática Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2024 De Giuli Informática Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -35,7 +35,7 @@ void StackOverrun(dgi::DGITracer& tracer)
     char data[10] = {0};            //stack memory
     strcpy(data,str.c_str());       //copy 20 bytes to a 10-byte area
 
-    std::cout << data << "\n" << std::endl;
+    std::cout << data << "\n\n";
 
     tracer.SendTrace(__LINE__,"<< DGICrash: StackOverrun");
 
@@ -47,7 +47,7 @@ void CallingConventionsMismatch(dgi::DGITracer& tracer)
     OutputDebugString(">> DGICrash: CallingConventionsMismatch\r\n");
 
     tracer.SendWarning(__LINE__,"-- Test has not yet been implemented");
-    std::cout << "Test has not yet been implemented\n" << std::endl;
+    std::cout << "Test has not yet been implemented\n\n";
 
     OutputDebugString("<< DGICrash: CallingConventionsMismatch\r\n");
 }
@@ -56,7 +56,7 @@ int StackOverflow_Aux(int x)
 {
     OutputDebugString("-- DGICrash: StackOverflow_Aux\r\n");
     
-    std::cout << "-- DGICrash: StackOverflow_Aux(" << x << ") -> " << (sizeof(double)*1000000) << std::endl;
+    std::cout << "-- DGICrash: StackOverflow_Aux(" << x << ") -> " << (sizeof(double)*1000000) << '\n';
 
     double very_large_array[1000000];
     memset(very_large_array,0x00,sizeof(very_large_array));
@@ -85,7 +85,7 @@ void AccessingUninitializedMemory(dgi::DGITracer& tracer)
     OutputDebugString(">> DGICrash: AccessingUninitializedMemory\r\n");
 
     tracer.SendWarning(__LINE__,"Test has not yet been implemented");
-    std::cout << "Test has not yet been implemented\n" << std::endl;
+    std::cout << "Test has not yet been implemented\n\n";
 
     OutputDebugString("<< DGICrash: AccessingUninitializedMemory\r\n");
 }
@@ -146,7 +146,7 @@ void AccessingFreedMemory(dgi::DGITracer& tracer)
         std::string str("XPTO");
         strcpy(pdata,str.c_str());
 
-        std::cout << pdata << std::endl;
+        std::cout << pdata << '\n';
     }
 
     tracer.SendTrace(__LINE__,"<< DGICrash: AccessingFreedMemory");
@@ -238,12 +238,12 @@ void FreeingUnallocatedMemeory(dgi::DGITracer& tracer)
     //char* mem;
 
     //tracer.SendInformation(__LINE__,"-- DGICrash: FreeingUnallocatedMemeory, addr %p",mem);
-    //std::cout << "FreeingUnallocatedMemeory: " << std::hex << mem << "\n" << std::endl;
+    //std::cout << "FreeingUnallocatedMemeory: " << std::hex << mem << "\n\n";
 
     //delete mem;
 
     tracer.SendWarning(__LINE__, "Test has not been implemented because newer VS reporst \"error C4700: uninitialized local variable '<var>' used\"");
-    std::cout << "Test has not been implemented because newer VS reporst \"error C4700: uninitialized local variable '<var>' used\"\n" << std::endl;
+    std::cout << "Test has not been implemented because newer VS reporst \"error C4700: uninitialized local variable '<var>' used\"\n\n";
 
     tracer.SendTrace(__LINE__, "<< DGICrash: FreeingUnallocatedMemeory");
 
@@ -255,7 +255,7 @@ void HeapHandleMismatch(dgi::DGITracer& tracer)
     OutputDebugString(">> DGICrash: HeapHandleMismatch\r\n");
 
     tracer.SendWarning(__LINE__,"-- Test has not yet been implemented");
-    std::cout << "Test has not yet been implemented\n" << std::endl;
+    std::cout << "Test has not yet been implemented\n\n";
 
     OutputDebugString("<< DGICrash: HeapHandleMismatch\r\n");
 }
@@ -264,30 +264,30 @@ void Usage()
 {
     OutputDebugString(">> DGICrash: Usage\r\n");
 
-    std::cout << "Usage:" << std::endl;
-    std::cout << "\tDGICrash <option>\n" << std::endl;
-    std::cout << "Options:" << std::endl;
-    std::cout << "\t1  - Stack Overrun" << std::endl;
-    std::cout << "\t2  - Calling Conventions Mismatch" << std::endl;
-    std::cout << "\t3  - Stack Overflow" << std::endl;
-    std::cout << "\t4  - Accessing Uninitialized Memory" << std::endl;
-    std::cout << "\t5  - Heap Overruns" << std::endl;
-    std::cout << "\t6  - Heap Underruns" << std::endl;
-    std::cout << "\t7  - Accessing Freed Memory" << std::endl;
-    std::cout << "\t8  - Double Frees" << std::endl;
-    std::cout << "\t9  - Erroneous Free (1)" << std::endl;
-    std::cout << "\t10 - Erroneous Free (2)" << std::endl;
-    std::cout << "\t11 - Erroneous Free (3)" << std::endl;
-    std::cout << "\t12 - Erroneous Free (4)" << std::endl;
-    std::cout << "\t13 - Freeing Unallocated Memeory" << std::endl;
-    std::cout << "\t14 - Heap Handle Mismatch\n" << std::endl;
+    std::cout << "Usage:\n";
+    std::cout << "\tDGICrash <option>\n\n";
+    std::cout << "Options:\n";
+    std::cout << "\t1  - Stack Overrun\n";
+    std::cout << "\t2  - Calling Conventions Mismatch\n";
+    std::cout << "\t3  - Stack Overflow\n" << '\n';
+    std::cout << "\t4  - Accessing Uninitialized Memory\n";
+    std::cout << "\t5  - Heap Overruns\n";
+    std::cout << "\t6  - Heap Underruns\n";
+    std::cout << "\t7  - Accessing Freed Memory\n";
+    std::cout << "\t8  - Double Frees\n";
+    std::cout << "\t9  - Erroneous Free (1)\n";
+    std::cout << "\t10 - Erroneous Free (2)\n";
+    std::cout << "\t11 - Erroneous Free (3)\n";
+    std::cout << "\t12 - Erroneous Free (4)\n";
+    std::cout << "\t13 - Freeing Unallocated Memeory\n";
+    std::cout << "\t14 - Heap Handle Mismatch\n\n";
 
     OutputDebugString("<< DGICrash: Usage\r\n");
 }
 
 int _cdecl main( int argc, char* argv[] )
 {
-    std::cout << ">> DGICrash\n" << std::endl;
+    std::cout << ">> DGICrash\n\n";
 
     if(IsDebuggerPresent())
     {
@@ -384,7 +384,7 @@ int _cdecl main( int argc, char* argv[] )
                 break;
             default:
                 tracer.SendError(__LINE__,"-- Invalid Option: %i",option);
-                std::cout << "Invalid Option: " << option << std::endl;
+                std::cout << "Invalid Option: " << option << '\n';
                 Usage();
                 break;
             }
@@ -396,7 +396,7 @@ int _cdecl main( int argc, char* argv[] )
     
         MiniDumpEnd();
         tracer.SendInformation(__LINE__,"<< DGICrash");
-        std::cout << "<< DGICrash\n" << std::endl;
+        std::cout << "<< DGICrash\n\n";
         OutputDebugString("<< DGICrash: main\r\n");
         return 0;
     }
@@ -407,8 +407,8 @@ int _cdecl main( int argc, char* argv[] )
             DebugBreak();
         }
 
-        std::cout << ia.what() << std::endl;
-        std::cout << "<< DGICrash\n" << std::endl;
+        std::cout << ia.what() << '\n';
+        std::cout << "<< DGICrash\n\n";
         OutputDebugString("<< DGICrash: inv arg exception\r\n");
         return -1;
     }
@@ -419,8 +419,8 @@ int _cdecl main( int argc, char* argv[] )
             DebugBreak();
         }
 
-        std::cout << le.what() << std::endl;
-        std::cout << "<< DGICrash\n" << std::endl;
+        std::cout << le.what() << '\n';
+        std::cout << "<< DGICrash\n\n";
         OutputDebugString("<< DGICrash: logic error exception\r\n");
         return -2;
     }
@@ -431,8 +431,8 @@ int _cdecl main( int argc, char* argv[] )
             DebugBreak();
         }
 
-        std::cout << e.what() << std::endl;
-        std::cout << "<< DGICrash\n" << std::endl;
+        std::cout << e.what() << '\n';
+        std::cout << "<< DGICrash\n\n";
         OutputDebugString("<< DGICrash: generic exception\r\n");
         return -3;
     }
@@ -443,12 +443,12 @@ int _cdecl main( int argc, char* argv[] )
             DebugBreak();
         }
 
-        std::cout << "Unhandled exception" << std::endl;
-        std::cout << "<< DGICrash\n" << std::endl;
+        std::cout << "Unhandled exception\n";
+        std::cout << "<< DGICrash\n\n";
         OutputDebugString("<< DGICrash: unhandled exception\r\n");
         abort();
     }
-    std::cout << "<< DGICrash\n" << std::endl;
+    std::cout << "<< DGICrash\n\n";
     OutputDebugString("<< DGICrash: shouldn't be here\r\n");
     abort();
 }

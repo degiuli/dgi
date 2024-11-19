@@ -1,8 +1,8 @@
 /*--
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 Fabio Lourencao De Giuli (http://degiuli.github.io)
-Copyright (c) 2012-2015 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
+Copyright (c) 2012-2019 Fabio Lourencao De Giuli (http://degiuli.github.io)
+Copyright (c) 2012-2019 De Giuli Informatica Ltda. (http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -76,11 +76,11 @@ namespace dgi
         //destructor
         ~DGITracer();
     
-        void SendTrace(const uint32_t id,const char *format,...);
-        void SendInformation(const uint32_t id,const char *format,...);
-        void SendWarning(const uint32_t id,const char *format,...);
-        void SendError(const uint32_t id,const char *format,...);
-        void SendFatal(const uint32_t id,const char *format,...);
+        void SendTrace(const uint32_t id,char const* format,...);
+        void SendInformation(const uint32_t id,char const* format,...);
+        void SendWarning(const uint32_t id,char const* format,...);
+        void SendError(const uint32_t id,char const* format,...);
+        void SendFatal(const uint32_t id,char const* format,...);
     };
 }   //end namespace dgi
 
