@@ -7,8 +7,8 @@ Project developed to study the C++11 and help to create random data.
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2017 Fabio Lourencao De Giuli [http://degiuli.github.io](http://degiuli.github.io)
-Copyright (c) 1998-2017 De Giuli Informatica Ltda. [http://www.degiuli.com.br](http://www.degiuli.com.br)
+Copyright (c) 2012-2024 Fabio Lourencao De Giuli [http://degiuli.github.io](http://degiuli.github.io)
+Copyright (c) 1998-2024 De Giuli Informatica Ltda. [http://www.degiuli.com.br](http://www.degiuli.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
